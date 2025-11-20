@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://example.org/dbc-ontology#"
-     xml:base="http://example.org/dbc-ontology"
+<rdf:RDF xmlns="https://paitools.github.io/DBCOntology/DBC.owl#"
+     xml:base="https://paitools.github.io/DBCOntology/DBC.owl"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:dbc="http://example.org/dbc#"
+     xmlns:dbc="https://paitools.github.io/DBCOntology/DBC.owl#"
      xmlns:dct="http://purl.org/dc/terms/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -19,7 +19,7 @@
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:dtype="http://www.linkedmodel.org/schema/dtype#"
      xmlns:schema="http://schema.org/">
-    <owl:Ontology rdf:about="http://example.org/dbc-ontology">
+    <owl:Ontology rdf:about="https://paitools.github.io/DBCOntology/DBC.owl">
         <owl:imports rdf:resource="http://qudt.org/3.0.0/schema/qudt"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/sosa/"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/ssn/"/>
@@ -42,98 +42,10 @@
     
 
 
-    <!-- http://example.org/dbc#decodedFrom -->
-
-    <owl:ObjectProperty rdf:about="http://example.org/dbc#decodedFrom">
-        <rdfs:domain rdf:resource="http://example.org/dbc#SignalLog"/>
-        <rdfs:range rdf:resource="http://example.org/dbc#MessageLog"/>
-        <rdfs:comment>Indicates that a SignalLog is derived by decoding a specific MessageLog observation.</rdfs:comment>
-        <rdfs:label>decoded from</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://example.org/dbc#decodedVia -->
-
-    <owl:ObjectProperty rdf:about="http://example.org/dbc#decodedVia">
-        <rdfs:domain rdf:resource="http://example.org/dbc#Signal"/>
-        <rdfs:range rdf:resource="http://example.org/dbc#SignalEncoding"/>
-        <rdfs:comment>Links a CAN signal definition to the SignalEncoding that defines how its bit-level representation is decoded into a physical or logical value.</rdfs:comment>
-        <rdfs:label>decoded via</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://example.org/dbc#encodedVia -->
-
-    <owl:ObjectProperty rdf:about="http://example.org/dbc#encodedVia">
-        <rdfs:domain rdf:resource="http://example.org/dbc#Message"/>
-        <rdfs:range rdf:resource="http://example.org/dbc#SignalEncoding"/>
-        <rdfs:comment>Links a CAN message definition to the SignalEncoding that specifies how its payload bytes are structured and interpreted.</rdfs:comment>
-        <rdfs:label>encoded via</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://example.org/dbc#hasReceiver -->
-
-    <owl:ObjectProperty rdf:about="http://example.org/dbc#hasReceiver">
-        <rdfs:domain rdf:resource="http://example.org/dbc#Signal"/>
-        <rdfs:range rdf:resource="http://example.org/dbc#Node"/>
-        <rdfs:comment>Links a CAN signal definition to the node (ECU) that consumes or interprets this signal.</rdfs:comment>
-        <rdfs:label>has receiver</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://example.org/dbc#hasSignal -->
-
-    <owl:ObjectProperty rdf:about="http://example.org/dbc#hasSignal">
-        <rdfs:domain rdf:resource="http://example.org/dbc#Message"/>
-        <rdfs:range rdf:resource="http://example.org/dbc#Signal"/>
-        <rdfs:comment>Indicates that a CAN message contains a particular signal within its payload structure.</rdfs:comment>
-        <rdfs:label>has signal</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://example.org/dbc#hasTransmitter -->
-
-    <owl:ObjectProperty rdf:about="http://example.org/dbc#hasTransmitter">
-        <rdfs:domain rdf:resource="http://example.org/dbc#Message"/>
-        <rdfs:range rdf:resource="http://example.org/dbc#Node"/>
-        <rdfs:comment>Links a CAN message definition to the node (ECU) responsible for transmitting it on the bus.</rdfs:comment>
-        <rdfs:label>has transmitter</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://example.org/dbc#isPartOf -->
-
-    <owl:ObjectProperty rdf:about="http://example.org/dbc#isPartOf">
-        <rdfs:domain rdf:resource="http://example.org/dbc#Signal"/>
-        <rdfs:range rdf:resource="http://example.org/dbc#Message"/>
-        <rdfs:comment>Indicates that a signal is a structural component of a particular CAN message definition.</rdfs:comment>
-        <rdfs:label>is part of</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://example.org/dbc#observedOn -->
-
-    <owl:ObjectProperty rdf:about="http://example.org/dbc#observedOn">
-        <rdfs:domain rdf:resource="http://example.org/dbc#MessageLog"/>
-        <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
-        <rdfs:comment>Links a MessageLog observation to the CAN bus (modeled as a sosa:Platform) on which the message was observed.</rdfs:comment>
-        <rdfs:label>observed on</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://qudt.org/schema/qudt/byteOrder -->
 
     <owl:ObjectProperty rdf:about="http://qudt.org/schema/qudt/byteOrder">
-        <rdfs:domain rdf:resource="http://example.org/dbc#SignalEncoding"/>
+        <rdfs:domain rdf:resource="https://paitools.github.io/DBCOntology/DBC.owl#SignalEncoding"/>
         <rdfs:range rdf:resource="http://qudt.org/schema/qudt/EndianType"/>
     </owl:ObjectProperty>
     
@@ -142,7 +54,7 @@
     <!-- http://qudt.org/schema/qudt/hasUnit -->
 
     <owl:ObjectProperty rdf:about="http://qudt.org/schema/qudt/hasUnit">
-        <rdfs:domain rdf:resource="http://example.org/dbc#Signal"/>
+        <rdfs:domain rdf:resource="https://paitools.github.io/DBCOntology/DBC.owl#Signal"/>
         <rdfs:label>has unit</rdfs:label>
     </owl:ObjectProperty>
     
@@ -218,6 +130,94 @@
     
 
 
+    <!-- https://paitools.github.io/DBCOntology/DBC.owl#decodedFrom -->
+
+    <owl:ObjectProperty rdf:about="https://paitools.github.io/DBCOntology/DBC.owl#decodedFrom">
+        <rdfs:domain rdf:resource="https://paitools.github.io/DBCOntology/DBC.owl#SignalLog"/>
+        <rdfs:range rdf:resource="https://paitools.github.io/DBCOntology/DBC.owl#MessageLog"/>
+        <rdfs:comment>Indicates that a SignalLog is derived by decoding a specific MessageLog observation.</rdfs:comment>
+        <rdfs:label>decoded from</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://paitools.github.io/DBCOntology/DBC.owl#decodedVia -->
+
+    <owl:ObjectProperty rdf:about="https://paitools.github.io/DBCOntology/DBC.owl#decodedVia">
+        <rdfs:domain rdf:resource="https://paitools.github.io/DBCOntology/DBC.owl#Signal"/>
+        <rdfs:range rdf:resource="https://paitools.github.io/DBCOntology/DBC.owl#SignalEncoding"/>
+        <rdfs:comment>Links a CAN signal definition to the SignalEncoding that defines how its bit-level representation is decoded into a physical or logical value.</rdfs:comment>
+        <rdfs:label>decoded via</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://paitools.github.io/DBCOntology/DBC.owl#encodedVia -->
+
+    <owl:ObjectProperty rdf:about="https://paitools.github.io/DBCOntology/DBC.owl#encodedVia">
+        <rdfs:domain rdf:resource="https://paitools.github.io/DBCOntology/DBC.owl#Message"/>
+        <rdfs:range rdf:resource="https://paitools.github.io/DBCOntology/DBC.owl#SignalEncoding"/>
+        <rdfs:comment>Links a CAN message definition to the SignalEncoding that specifies how its payload bytes are structured and interpreted.</rdfs:comment>
+        <rdfs:label>encoded via</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://paitools.github.io/DBCOntology/DBC.owl#hasReceiver -->
+
+    <owl:ObjectProperty rdf:about="https://paitools.github.io/DBCOntology/DBC.owl#hasReceiver">
+        <rdfs:domain rdf:resource="https://paitools.github.io/DBCOntology/DBC.owl#Signal"/>
+        <rdfs:range rdf:resource="https://paitools.github.io/DBCOntology/DBC.owl#Node"/>
+        <rdfs:comment>Links a CAN signal definition to the node (ECU) that consumes or interprets this signal.</rdfs:comment>
+        <rdfs:label>has receiver</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://paitools.github.io/DBCOntology/DBC.owl#hasSignal -->
+
+    <owl:ObjectProperty rdf:about="https://paitools.github.io/DBCOntology/DBC.owl#hasSignal">
+        <rdfs:domain rdf:resource="https://paitools.github.io/DBCOntology/DBC.owl#Message"/>
+        <rdfs:range rdf:resource="https://paitools.github.io/DBCOntology/DBC.owl#Signal"/>
+        <rdfs:comment>Indicates that a CAN message contains a particular signal within its payload structure.</rdfs:comment>
+        <rdfs:label>has signal</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://paitools.github.io/DBCOntology/DBC.owl#hasTransmitter -->
+
+    <owl:ObjectProperty rdf:about="https://paitools.github.io/DBCOntology/DBC.owl#hasTransmitter">
+        <rdfs:domain rdf:resource="https://paitools.github.io/DBCOntology/DBC.owl#Message"/>
+        <rdfs:range rdf:resource="https://paitools.github.io/DBCOntology/DBC.owl#Node"/>
+        <rdfs:comment>Links a CAN message definition to the node (ECU) responsible for transmitting it on the bus.</rdfs:comment>
+        <rdfs:label>has transmitter</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://paitools.github.io/DBCOntology/DBC.owl#isPartOf -->
+
+    <owl:ObjectProperty rdf:about="https://paitools.github.io/DBCOntology/DBC.owl#isPartOf">
+        <rdfs:domain rdf:resource="https://paitools.github.io/DBCOntology/DBC.owl#Signal"/>
+        <rdfs:range rdf:resource="https://paitools.github.io/DBCOntology/DBC.owl#Message"/>
+        <rdfs:comment>Indicates that a signal is a structural component of a particular CAN message definition.</rdfs:comment>
+        <rdfs:label>is part of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://paitools.github.io/DBCOntology/DBC.owl#observedOn -->
+
+    <owl:ObjectProperty rdf:about="https://paitools.github.io/DBCOntology/DBC.owl#observedOn">
+        <rdfs:domain rdf:resource="https://paitools.github.io/DBCOntology/DBC.owl#MessageLog"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
+        <rdfs:comment>Links a MessageLog observation to the CAN bus (modeled as a sosa:Platform) on which the message was observed.</rdfs:comment>
+        <rdfs:label>observed on</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -226,72 +226,6 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- http://example.org/dbc#bitLength -->
-
-    <owl:DatatypeProperty rdf:about="http://example.org/dbc#bitLength">
-        <rdfs:domain rdf:resource="http://example.org/dbc#SignalEncoding"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-        <rdfs:comment>Specifies the size of the signal in bits within the CAN message payload.</rdfs:comment>
-        <rdfs:label>bit length</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://example.org/dbc#bitStart -->
-
-    <owl:DatatypeProperty rdf:about="http://example.org/dbc#bitStart">
-        <rdfs:domain rdf:resource="http://example.org/dbc#SignalEncoding"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-        <rdfs:comment>Specifies the starting bit position of the signal within the raw CAN message payload.</rdfs:comment>
-        <rdfs:label>bit start</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://example.org/dbc#dataLength -->
-
-    <owl:DatatypeProperty rdf:about="http://example.org/dbc#dataLength">
-        <rdfs:domain rdf:resource="http://example.org/dbc#Message"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-        <rdfs:comment>Specifies the payload length of the CAN message in bytes.</rdfs:comment>
-        <rdfs:label>data length</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://example.org/dbc#hasDecID -->
-
-    <owl:DatatypeProperty rdf:about="http://example.org/dbc#hasDecID">
-        <rdfs:domain rdf:resource="http://example.org/dbc#Message"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-        <rdfs:comment>Assigns the CAN identifier of the message in decimal notation.</rdfs:comment>
-        <rdfs:label>decimal ID</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://example.org/dbc#hasHexID -->
-
-    <owl:DatatypeProperty rdf:about="http://example.org/dbc#hasHexID">
-        <rdfs:domain rdf:resource="http://example.org/dbc#MessageLog"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment>Stores the CAN identifier of a logged message in hexadecimal notation, as extracted from the CAN frame.</rdfs:comment>
-        <rdfs:label>hexadecimal ID</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://example.org/dbc#signed -->
-
-    <owl:DatatypeProperty rdf:about="http://example.org/dbc#signed">
-        <rdfs:domain rdf:resource="http://example.org/dbc#SignalEncoding"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-        <rdfs:comment>Indicates whether the encoded signal uses signed numerical representation (true) or unsigned (false).</rdfs:comment>
-        <rdfs:label>signed</rdfs:label>
-    </owl:DatatypeProperty>
     
 
 
@@ -352,6 +286,72 @@
     
 
 
+    <!-- https://paitools.github.io/DBCOntology/DBC.owl#bitLength -->
+
+    <owl:DatatypeProperty rdf:about="https://paitools.github.io/DBCOntology/DBC.owl#bitLength">
+        <rdfs:domain rdf:resource="https://paitools.github.io/DBCOntology/DBC.owl#SignalEncoding"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Specifies the size of the signal in bits within the CAN message payload.</rdfs:comment>
+        <rdfs:label>bit length</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://paitools.github.io/DBCOntology/DBC.owl#bitStart -->
+
+    <owl:DatatypeProperty rdf:about="https://paitools.github.io/DBCOntology/DBC.owl#bitStart">
+        <rdfs:domain rdf:resource="https://paitools.github.io/DBCOntology/DBC.owl#SignalEncoding"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Specifies the starting bit position of the signal within the raw CAN message payload.</rdfs:comment>
+        <rdfs:label>bit start</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://paitools.github.io/DBCOntology/DBC.owl#dataLength -->
+
+    <owl:DatatypeProperty rdf:about="https://paitools.github.io/DBCOntology/DBC.owl#dataLength">
+        <rdfs:domain rdf:resource="https://paitools.github.io/DBCOntology/DBC.owl#Message"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Specifies the payload length of the CAN message in bytes.</rdfs:comment>
+        <rdfs:label>data length</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://paitools.github.io/DBCOntology/DBC.owl#hasDecID -->
+
+    <owl:DatatypeProperty rdf:about="https://paitools.github.io/DBCOntology/DBC.owl#hasDecID">
+        <rdfs:domain rdf:resource="https://paitools.github.io/DBCOntology/DBC.owl#Message"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Assigns the CAN identifier of the message in decimal notation.</rdfs:comment>
+        <rdfs:label>decimal ID</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://paitools.github.io/DBCOntology/DBC.owl#hasHexID -->
+
+    <owl:DatatypeProperty rdf:about="https://paitools.github.io/DBCOntology/DBC.owl#hasHexID">
+        <rdfs:domain rdf:resource="https://paitools.github.io/DBCOntology/DBC.owl#MessageLog"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Stores the CAN identifier of a logged message in hexadecimal notation, as extracted from the CAN frame.</rdfs:comment>
+        <rdfs:label>hexadecimal ID</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://paitools.github.io/DBCOntology/DBC.owl#signed -->
+
+    <owl:DatatypeProperty rdf:about="https://paitools.github.io/DBCOntology/DBC.owl#signed">
+        <rdfs:domain rdf:resource="https://paitools.github.io/DBCOntology/DBC.owl#SignalEncoding"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>Indicates whether the encoded signal uses signed numerical representation (true) or unsigned (false).</rdfs:comment>
+        <rdfs:label>signed</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -360,66 +360,6 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- http://example.org/dbc#Message -->
-
-    <owl:Class rdf:about="http://example.org/dbc#Message">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <owl:disjointWith rdf:resource="http://example.org/dbc#Signal"/>
-        <rdfs:comment>Represents a CAN message definition, including its structure and the set of signals it contains.</rdfs:comment>
-        <rdfs:label>Message</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://example.org/dbc#MessageLog -->
-
-    <owl:Class rdf:about="http://example.org/dbc#MessageLog">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
-        <owl:disjointWith rdf:resource="http://example.org/dbc#SignalLog"/>
-        <rdfs:comment>Represents an observation of a CAN message in raw, encoded form as captured from the bus, including timestamp, identifier, and payload bytes.</rdfs:comment>
-        <rdfs:label>Message Log</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://example.org/dbc#Node -->
-
-    <owl:Class rdf:about="http://example.org/dbc#Node">
-        <rdfs:comment>Represents an ECU or logical node on the CAN network that transmits or receives messages or signals.</rdfs:comment>
-        <rdfs:label>Node</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://example.org/dbc#Signal -->
-
-    <owl:Class rdf:about="http://example.org/dbc#Signal">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <rdfs:comment>Represents a decoded physical or logical quantity encoded inside a CAN message. Each signal corresponds to an observable property that can be measured and interpreted.</rdfs:comment>
-        <rdfs:label>Signal</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://example.org/dbc#SignalEncoding -->
-
-    <owl:Class rdf:about="http://example.org/dbc#SignalEncoding">
-        <rdfs:comment>Describes the metadata required to interpret and decode a CAN signal, including bit position, length, signedness, byte order, and scaling parameters.</rdfs:comment>
-        <rdfs:label>Signal Encoding</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://example.org/dbc#SignalLog -->
-
-    <owl:Class rdf:about="http://example.org/dbc#SignalLog">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
-        <rdfs:comment>Represents a decoded observation of a specific CAN signal, derived from a raw MessageLog entry and expressing a physical value with units.</rdfs:comment>
-        <rdfs:label>Signal Log</rdfs:label>
-    </owl:Class>
     
 
 
@@ -461,6 +401,66 @@
     <owl:Class rdf:about="http://www.w3.org/ns/sosa/Sensor">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/System"/>
         <rdfs:label>Sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://paitools.github.io/DBCOntology/DBC.owl#Message -->
+
+    <owl:Class rdf:about="https://paitools.github.io/DBCOntology/DBC.owl#Message">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+        <owl:disjointWith rdf:resource="https://paitools.github.io/DBCOntology/DBC.owl#Signal"/>
+        <rdfs:comment>Represents a CAN message definition, including its structure and the set of signals it contains.</rdfs:comment>
+        <rdfs:label>Message</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://paitools.github.io/DBCOntology/DBC.owl#MessageLog -->
+
+    <owl:Class rdf:about="https://paitools.github.io/DBCOntology/DBC.owl#MessageLog">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <owl:disjointWith rdf:resource="https://paitools.github.io/DBCOntology/DBC.owl#SignalLog"/>
+        <rdfs:comment>Represents an observation of a CAN message in raw, encoded form as captured from the bus, including timestamp, identifier, and payload bytes.</rdfs:comment>
+        <rdfs:label>Message Log</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://paitools.github.io/DBCOntology/DBC.owl#Node -->
+
+    <owl:Class rdf:about="https://paitools.github.io/DBCOntology/DBC.owl#Node">
+        <rdfs:comment>Represents an ECU or logical node on the CAN network that transmits or receives messages or signals.</rdfs:comment>
+        <rdfs:label>Node</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://paitools.github.io/DBCOntology/DBC.owl#Signal -->
+
+    <owl:Class rdf:about="https://paitools.github.io/DBCOntology/DBC.owl#Signal">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+        <rdfs:comment>Represents a decoded physical or logical quantity encoded inside a CAN message. Each signal corresponds to an observable property that can be measured and interpreted.</rdfs:comment>
+        <rdfs:label>Signal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://paitools.github.io/DBCOntology/DBC.owl#SignalEncoding -->
+
+    <owl:Class rdf:about="https://paitools.github.io/DBCOntology/DBC.owl#SignalEncoding">
+        <rdfs:comment>Describes the metadata required to interpret and decode a CAN signal, including bit position, length, signedness, byte order, and scaling parameters.</rdfs:comment>
+        <rdfs:label>Signal Encoding</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://paitools.github.io/DBCOntology/DBC.owl#SignalLog -->
+
+    <owl:Class rdf:about="https://paitools.github.io/DBCOntology/DBC.owl#SignalLog">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:comment>Represents a decoded observation of a specific CAN signal, derived from a raw MessageLog entry and expressing a physical value with units.</rdfs:comment>
+        <rdfs:label>Signal Log</rdfs:label>
     </owl:Class>
     
 
