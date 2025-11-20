@@ -1,0 +1,165 @@
+VERSION "created by canmatrix"
+
+
+NS_ :
+
+BS_:
+
+BU_: Boening 
+
+
+BO_ 2566848513 BoeningI: 8 Vector__XXX
+ SG_ Kraftstofftank01 : 0|16@1+ (1,0) [0|65535] "L" Vector__XXX
+ SG_ Kraftstofftank02 : 16|16@1+ (1,0) [0|65535] "L" Vector__XXX
+ SG_ Kraftstofftank05 : 32|16@1+ (1,0) [0|65535] "L" Vector__XXX
+ SG_ Kraftstofftank06 : 48|16@1+ (1,0) [0|65535] "L" Vector__XXX
+
+BO_ 2566848769 BoeningII: 8 Vector__XXX
+ SG_ Kraftstofftank07 : 0|16@1+ (1,0) [0|65535] "L" Vector__XXX
+ SG_ Kraftstofftank08 : 16|16@1+ (1,0) [0|65535] "L" Vector__XXX
+ SG_ Kraftstofftank15 : 32|16@1+ (1,0) [0|65535] "L" Vector__XXX
+ SG_ Bilgenwassertank12 : 48|16@1+ (1,0) [0|65535] "L" Vector__XXX
+
+BO_ 2566849025 BoeningIII: 8 Vector__XXX
+ SG_ Frischwassertank14 : 0|16@1+ (1,0) [0|65535] "L" Vector__XXX
+ SG_ Schraeglagesensor : 16|16@1- (1,0) [-32768|32767] "grad" Vector__XXX
+ SG_ MaschinenraumTemperatur : 32|16@1+ (1,0) [0|65535] "grad Celsius" Vector__XXX
+ SG_ DruckFeuerloeschpumpe : 48|16@1+ (0.1,0) [0|6553.5] "bar" Vector__XXX
+
+BO_ 2566849281 BoeningIV: 8 Vector__XXX
+ SG_ StromLichtmaschineHauptmotorBb : 0|16@1+ (1,0) [0|65535] "A" Vector__XXX
+ SG_ GetriebeBbSchmieroelTemperatur : 16|16@1+ (1,0) [0|65535] "grad Celsius" Vector__XXX
+ SG_ StromLichtmaschineHauptmotorStb : 32|16@1+ (1,0) [0|65535] "A" Vector__XXX
+ SG_ GetriebeStbSchmieroelTemperatur : 48|16@1+ (1,0) [0|65535] "grad Celsius" Vector__XXX
+
+BO_ 2566849537 BoeningV: 8 Vector__XXX
+ SG_ SpannungAutomationsbatterie : 0|16@1- (0.1,0) [-3276.8|3276.7] "V" Vector__XXX
+ SG_ StromAutomationsbatterie : 16|16@1- (0.1,0) [-3276.8|3276.7] "A" Vector__XXX
+ SG_ SpannungBrueckenbatterie : 32|16@1- (0.1,0) [-3276.8|3276.7] "V" Vector__XXX
+ SG_ StromBrueckenbatterie : 48|16@1- (0.1,0) [-3276.8|3276.7] "A" Vector__XXX
+
+BO_ 2566849793 BoeningVI: 8 Vector__XXX
+ SG_ KraftstoffGesamt : 0|16@1+ (1,0) [0|65535] "L" Vector__XXX
+ SG_ DrehzahlLuefterStb : 16|16@1+ (1,0) [0|65535] "1/min" Vector__XXX
+ SG_ DrehzahlLuefterBb : 32|16@1+ (1,0) [0|65535] "%" Vector__XXX
+
+BO_ 2566850049 BoeningVII: 8 Vector__XXX
+ SG_ StromL1Landanschluss : 0|16@1+ (0.1,0) [0|6553.5] "A" Vector__XXX
+ SG_ StromL2Landanschluss : 16|16@1+ (0.1,0) [0|6553.5] "A" Vector__XXX
+ SG_ StromL3Landanschluss : 32|16@1+ (0.1,0) [0|6553.5] "A" Vector__XXX
+ SG_ WirkleistungLandanschluss : 48|16@1+ (1,0) [0|65535] "kW" Vector__XXX
+
+BO_ 2566850305 BoeningVIII: 8 Vector__XXX
+ SG_ VerbrauchLandanschluss : 0|32@1+ (1,0) [0|4294967295] "kWh" Vector__XXX
+ SG_ SpannungLandanschluss : 32|16@1+ (1,0) [0|65535] "V" Vector__XXX
+ SG_ FrequenzLandanschluss : 48|16@1+ (0.1,0) [0|6553.5] "Hz" Vector__XXX
+
+BO_ 2566850561 BoeningIX: 8 Vector__XXX
+ SG_ LeistungHDGross : 0|16@1+ (1,0) [0|65535] "kW" Vector__XXX
+ SG_ BelastungHDGross : 16|16@1+ (1,0) [0|65535] "%" Vector__XXX
+ SG_ StromL1HDGross : 32|16@1+ (0.1,0) [0|6553.5] "A" Vector__XXX
+ SG_ StromL2HDGross : 48|16@1+ (0.1,0) [0|6553.5] "A" Vector__XXX
+
+BO_ 2566850817 BoeningX: 8 Vector__XXX
+ SG_ StromL3HDGross : 0|16@1+ (0.1,0) [0|6553.5] "A" Vector__XXX
+ SG_ SpannungHDGross : 16|16@1+ (1,0) [0|65535] "V" Vector__XXX
+ SG_ FrequenzHDGross : 32|16@1+ (0.1,0) [0|6553.5] "Hz" Vector__XXX
+
+BO_ 2566851073 BoeningXI: 8 Vector__XXX
+ SG_ LeistungHDKlein : 0|16@1+ (1,0) [0|65535] "kW" Vector__XXX
+ SG_ BelastungHDKlein : 16|16@1+ (1,0) [0|65535] "%" Vector__XXX
+ SG_ StromL1HDKlein : 32|16@1+ (0.1,0) [0|6553.5] "A" Vector__XXX
+ SG_ StromL2HDKlein : 48|16@1+ (0.1,0) [0|6553.5] "A" Vector__XXX
+
+BO_ 2566851329 BoeningXII: 8 Vector__XXX
+ SG_ StromL3HDKlein : 0|16@1+ (0.1,0) [0|6553.5] "A" Vector__XXX
+ SG_ SpannungHDKlein : 16|16@1+ (1,0) [0|65535] "V" Vector__XXX
+ SG_ FrequenzHDKlein : 32|16@1+ (0.1,0) [0|6553.5] "Hz" Vector__XXX
+
+BO_ 2566851585 BoeningXIII: 8 Vector__XXX
+ SG_ SchmieroeldruckHDKlein : 0|16@1+ (0.1,0) [0|6553.5] "bar" Vector__XXX
+ SG_ KuehlwassertemperaturHDKlein : 16|16@1+ (1,0) [0|65535] "grad Celsius" Vector__XXX
+
+BO_ 2566851841 BoeningXIV: 8 Vector__XXX
+ SG_ Abwassertank25Prozent : 0|1@1+ (1,0) [0|1] "aus/an" Vector__XXX
+ SG_ Abwassertank50Prozent : 1|1@1+ (1,0) [0|1] "aus/an" Vector__XXX
+ SG_ Abwassertank75Prozent : 2|1@1+ (1,0) [0|1] "aus/an" Vector__XXX
+ SG_ Abwassertank90Prozent : 3|1@1+ (1,0) [0|1] "aus/an" Vector__XXX
+ SG_ KFWAPumpeEin : 4|1@1+ (1,0) [0|1] "aus/an" Vector__XXX
+ SG_ TankalarmeAktiv : 5|1@1+ (1,0) [0|1] "aus/an" Vector__XXX
+
+BO_ 2566852097 BoeningXV: 8 Vector__XXX
+ SG_ HydraulikHDGrossAktiv : 0|1@1+ (1,0) [0|1] "aus/an" Vector__XXX
+ SG_ Landanschluss : 1|1@1+ (1,0) [0|1] "aus/an" Vector__XXX
+ SG_ GLSHDGross : 2|1@1+ (1,0) [0|1] "aus/an" Vector__XXX
+ SG_ GLSHDKlein : 3|1@1+ (1,0) [0|1] "aus/an" Vector__XXX
+ SG_ AutomatikModeHDGross : 4|1@1+ (1,0) [0|1] "aus/an" Vector__XXX
+ SG_ AutomatikModeHDKlein : 5|1@1+ (1,0) [0|1] "aus/an" Vector__XXX
+
+
+
+CM_ SG_ 2566848513 Kraftstofftank01 "Kraftstofftank 01 (Bunkertank) Bb.";
+CM_ SG_ 2566848513 Kraftstofftank02 "Kraftstofftank 02 (Bunkertank) Stb.";
+CM_ SG_ 2566848513 Kraftstofftank05 "Kraftstofftank 05 (Tagestank)  Bb.";
+CM_ SG_ 2566848513 Kraftstofftank06 "Kraftstofftank 06 (Tagestank)  Stb.";
+CM_ SG_ 2566848769 Kraftstofftank07 "Kraftstofftank 07 (Vorratstank)  Bb.";
+CM_ SG_ 2566848769 Kraftstofftank08 "Kraftstofftank 08 (Vorratstank)  Stb.";
+CM_ SG_ 2566848769 Kraftstofftank15 "Kraftstofftank 15 (Bunkertank) Mitte";
+CM_ SG_ 2566848769 Bilgenwassertank12 "Bilgenwassertank 12";
+CM_ SG_ 2566849025 Frischwassertank14 "Frischwassertank 14";
+CM_ SG_ 2566849025 Schraeglagesensor "Schräglagesensor / Krängung";
+CM_ SG_ 2566849025 MaschinenraumTemperatur "Maschinenraumtemperatur";
+CM_ SG_ 2566849025 DruckFeuerloeschpumpe "Druck Feuerlöschpumpe";
+CM_ SG_ 2566849281 StromLichtmaschineHauptmotorBb "Strom Lichtmaschine Hauptmotor Bb.";
+CM_ SG_ 2566849281 GetriebeBbSchmieroelTemperatur "Getriebe Bb. Schmieröl Temperatur";
+CM_ SG_ 2566849281 StromLichtmaschineHauptmotorStb "Strom Lichtmaschine Hauptmotor Stb.";
+CM_ SG_ 2566849281 GetriebeStbSchmieroelTemperatur "Getriebe Stb. Schmieröl Temperatur";
+CM_ SG_ 2566849537 SpannungAutomationsbatterie "Spannung / Automationsbatterie";
+CM_ SG_ 2566849537 StromAutomationsbatterie "Strom / Automationsbatterie";
+CM_ SG_ 2566849537 SpannungBrueckenbatterie "Spannung / Brückenbatterie";
+CM_ SG_ 2566849537 StromBrueckenbatterie "Strom / Brückenbatterie";
+CM_ SG_ 2566849793 KraftstoffGesamt "Kraftstoff Gesamt";
+CM_ SG_ 2566849793 DrehzahlLuefterStb "Drehzahl Lüfter Stb.";
+CM_ SG_ 2566849793 DrehzahlLuefterBb "Drehzahl Lüfter Bb.";
+CM_ SG_ 2566850049 StromL1Landanschluss "Strom L1 / Landanschluss";
+CM_ SG_ 2566850049 StromL2Landanschluss "Strom L2 / Landanschluss";
+CM_ SG_ 2566850049 StromL3Landanschluss "Strom L3 / Landanschluss";
+CM_ SG_ 2566850049 WirkleistungLandanschluss "Wirkleistung / Landanschluss";
+CM_ SG_ 2566850305 VerbrauchLandanschluss "Verbrauch / Landanschluss";
+CM_ SG_ 2566850305 SpannungLandanschluss "Spannung / Landanschluss";
+CM_ SG_ 2566850305 FrequenzLandanschluss "Frequenz / Landanschluss";
+CM_ SG_ 2566850561 LeistungHDGross "Leistung / HD groß";
+CM_ SG_ 2566850561 BelastungHDGross "Belastung / HD groß";
+CM_ SG_ 2566850561 StromL1HDGross "Strom L1 / HD groß";
+CM_ SG_ 2566850561 StromL2HDGross "Strom L2 / HD groß";
+CM_ SG_ 2566850817 StromL3HDGross "Strom L3 / HD groß";
+CM_ SG_ 2566850817 SpannungHDGross "Spannung / HD groß";
+CM_ SG_ 2566850817 FrequenzHDGross "Frequenz / HD groß";
+CM_ SG_ 2566851073 LeistungHDKlein "Leistung / HD klein";
+CM_ SG_ 2566851073 BelastungHDKlein "Belastung / HD klein";
+CM_ SG_ 2566851073 StromL1HDKlein "Strom L1 / HD klein";
+CM_ SG_ 2566851073 StromL2HDKlein "Strom L2 / HD klein";
+CM_ SG_ 2566851329 StromL3HDKlein "Strom L3 / HD klein";
+CM_ SG_ 2566851329 SpannungHDKlein "Spannung / HD klein";
+CM_ SG_ 2566851329 FrequenzHDKlein "Frequenz / HD klein";
+CM_ SG_ 2566851585 SchmieroeldruckHDKlein "Schmieröldruck / HD klein";
+CM_ SG_ 2566851585 KuehlwassertemperaturHDKlein "Kühlwassertemperatur / HD klein";
+CM_ SG_ 2566851841 Abwassertank25Prozent "Abwassertank 25%";
+CM_ SG_ 2566851841 Abwassertank50Prozent "Abwassertank 50%";
+CM_ SG_ 2566851841 Abwassertank75Prozent "Abwassertank 75%";
+CM_ SG_ 2566851841 Abwassertank90Prozent "Abwassertank 90%";
+CM_ SG_ 2566851841 KFWAPumpeEin "KFWA Pumpe Ein";
+CM_ SG_ 2566851841 TankalarmeAktiv "Tankalarme aktiv";
+CM_ SG_ 2566852097 HydraulikHDGrossAktiv "Hydraulik HD groß aktiv";
+CM_ SG_ 2566852097 Landanschluss "Landanschluss";
+CM_ SG_ 2566852097 GLSHDGross "GLS / HD groß";
+CM_ SG_ 2566852097 GLSHDKlein "GLS / HD klein";
+CM_ SG_ 2566852097 AutomatikModeHDGross "Automatik mode / HD groß";
+CM_ SG_ 2566852097 AutomatikModeHDKlein "Automatik mode / HD klein";
+
+
+BA_DEF_ BO_ "GenMsgCycleTime" INT 0 65535;
+
+
+
+
