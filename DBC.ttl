@@ -229,5 +229,5 @@ sosa:hasSimpleResult a owl:DatatypeProperty ;
 sosa:resultTime a owl:DatatypeProperty ;
     rdfs:domain sosa:Observation ;
     rdfs:range xsd:dateTime ;
-
     rdfs:label "result time" .
+
