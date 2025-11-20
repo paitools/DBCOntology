@@ -9,11 +9,11 @@ import shutil
 # USER CONFIGURATION
 # ---------------------------------------------------
 
-INPUT_TEMPLATE = "KGM_Template.xlsx"   # Knowledge Graph Matrix (KGM) template
+INPUT_TEMPLATE = "KGM/KGM_Template.xlsx"   # Knowledge Graph Matrix (KGM) template
 OUTPUT_EXCEL = "KGM.xlsx"              # Output - KGM populated with DBC file entries
 
-DBC_FILE = "boening.dbc"
-UNIT_MAPPING_FILE = "unit_mapping.json"
+DBC_FILE = "DBC/boening.dbc"
+UNIT_MAPPING_FILE = "KGM/unit_mapping.json"
 
 CAN_PLATFORM = "can2"
 SNIFFING_SENSOR = "can2_sniffer"
@@ -212,3 +212,4 @@ if __name__ == "__main__":
     )
 
     print("\n🎉 KGM.xlsx generated successfully!")
+
