@@ -11,8 +11,8 @@
 <http://example.org/dbc-ontology> a owl:Ontology ;
 
     owl:imports <http://www.w3.org/ns/sosa/> ,
-<http://www.w3.org/ns/ssn/> ,
-<http://qudt.org/3.0.0/schema/qudt> .
+                <http://www.w3.org/ns/ssn/> ,
+                <http://qudt.org/3.0.0/schema/qudt> .
 
 #################################################################
 
@@ -229,4 +229,5 @@ sosa:hasSimpleResult a owl:DatatypeProperty ;
 sosa:resultTime a owl:DatatypeProperty ;
     rdfs:domain sosa:Observation ;
     rdfs:range xsd:dateTime ;
+
     rdfs:label "result time" .
