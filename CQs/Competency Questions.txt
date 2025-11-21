@@ -1,0 +1,61 @@
+#########################################
+### C01: Observable Properties ###
+#########################################
+
+General
+1. What signals are encoded in CAN messages?
+2. Which CAN messages are observable on the bus?
+3. How are signals mapped to CAN messages?
+4. Which properties are defined for a CAN message?
+5. Which units and encoding schemas are used for signal decoding?
+6. Which CAN message contains the highest number of signals?
+
+Domain specific
+1. Which signals carry voltage measurements?
+2. What signals are part of the BoeningVI CAN message?
+3. Which CAN message encodes the fire pump pressure signal?
+4. What is the encoding schema of the inclination signal?
+5. Which signals are targeting the Vector__XXX receiver node? 
+6. What is the decimal identifier of the bridge battery voltage signal?
+
+##################################
+### C02: Sensors and Platforms ###
+##################################
+
+General
+1. How are sniffing sensors associated with transmitter nodes?
+2. Which CAN bus platforms are hosting the sniffing sensors?
+3. Which relations link CAN messages to CAN bus platforms?
+
+Domain specific
+1. Which platform hosts the can1_sniffer sensor?
+2. Which message identifiers (Hex IDs) are observable on the can1 CAN bus platform?
+3. Which transmitter nodes are associated with the can2_sniffer sensor?
+
+##########################
+### C03: Observations ###
+##########################
+
+General
+1. Which types of observations are represented in the system?
+2. What are the core components of a CAN message log?
+3. How are signal log observations represented in the system?
+4. Which CAN bus platforms carry CAN message logs?
+5. Which measurement units are assigned to the results of signal log observations?
+
+Domain specific
+1. What is the current temperature in the engine room?
+2. Which unit is associated to the signal log of the fresh water tank?
+3. Which message logs were most recently recorded on can2 bus?
+4. What was the average value of the fuel tank 1 signal in the last three days?
+5. What is the maximum port fan RPM observed on 01.01.2021 after 2 pm?
+
+
+###############################
+### C04: Advanced Modeling ###
+###############################
+
+Domain specific
+1. What were the port fan speed values on 01.03.2021 when the engine room temperature exceeded 24°C?
+2. What are encoding schemas of CAN message that observes the highest number of signals?
+3. Which signals have measured values at least 20?percent higher than the average in the last 10 minutes?
