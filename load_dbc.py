@@ -1,16 +1,18 @@
-import cantools
-import pandas as pd
-from openpyxl import load_workbook
 import json
 import os
 import shutil
+
+import cantools
+import pandas as pd
+from openpyxl import load_workbook
+
 
 # ---------------------------------------------------
 # USER CONFIGURATION
 # ---------------------------------------------------
 
-INPUT_TEMPLATE = "KGM/KGM_Template.xlsx"   # Knowledge Graph Matrix (KGM) template
-OUTPUT_EXCEL = "KGM.xlsx"                  # Output - KGM populated with DBC file entries
+INPUT_TEMPLATE = "KGM/KGM_Template.xlsx"   # Knowledge Graph Matrix template
+OUTPUT_EXCEL = "KGM.xlsx"                  # Output - populated KGM
 
 DBC_FILE = "DBC/boening.dbc"
 UNIT_MAPPING_FILE = "KGM/unit_mapping.json"
@@ -23,22 +25,27 @@ SNIFFING_SENSOR = "can2_sniffer"
 # QUDT UNIT MAPPING
 # ---------------------------------------------------
 
-def load_unit_mapping(json_path=UNIT_MAPPING_FILE):
+def load_unit_mapping(json_path: str = UNIT_MAPPING_FILE) -> dict:
     """Load unit mappings from JSON file."""
     if not os.path.exists(json_path):
         raise FileNotFoundError(f"❌ Unit mapping file not found: {json_path}")
+
     with open(json_path, "r", encoding="utf-8") as f:
         return json.load(f)
 
 
 def map_to_qudt_unit(raw_unit: str, unit_map: dict) -> str:
+    """Convert raw unit string to its QUDT equivalent."""
     if not raw_unit:
         return ""
+
     key = raw_unit.strip().lower()
     mapped = unit_map.get(key)
+
     if mapped is None:
         print(f"⚠️ Warning: Unknown unit '{raw_unit}' — keeping as-is.")
         return raw_unit
+
     return mapped
 
 
@@ -46,7 +53,8 @@ def map_to_qudt_unit(raw_unit: str, unit_map: dict) -> str:
 # DBC PARSING
 # ---------------------------------------------------
 
-def parse_dbc(file_path, unit_map):
+def parse_dbc(file_path: str, unit_map: dict):
+    """Parse a DBC file into Signals, Messages, Encodings, and Nodes."""
     db = cantools.database.load_file(file_path)
 
     signals_data = []
@@ -55,11 +63,12 @@ def parse_dbc(file_path, unit_map):
     nodes_data = set()
 
     for msg in db.messages:
-
+        # Transmitters
         transmitters = msg.senders if msg.senders else ["Unknown"]
         transmitters = ["Unknown" if t == "Vector__XXX" else t for t in transmitters]
         nodes_data.update(transmitters)
 
+        # Message relationship fields
         signal_names = [sig.name for sig in msg.signals]
         encoded_via = [f"{sig.name}Encoding" for sig in msg.signals]
 
@@ -74,14 +83,13 @@ def parse_dbc(file_path, unit_map):
             "sosa:isObservedBy": SNIFFING_SENSOR
         })
 
+        # Signals + encodings
         for sig in msg.signals:
-
             receivers = sig.receivers if sig.receivers else ["Unknown"]
             receivers = ["Unknown" if r == "Vector__XXX" else r for r in receivers]
+            nodes_data.update(receivers)
 
             unit = map_to_qudt_unit(sig.unit or "", unit_map)
-
-            nodes_data.update(receivers)
 
             # SIGNAL ENTRY
             signals_data.append({
@@ -98,10 +106,12 @@ def parse_dbc(file_path, unit_map):
             encodings_data.append({
                 "Individual": f"{sig.name}Encoding",
                 "rdf:type": "dbc:SignalEncoding",
-                "dbc:bitLenght": sig.length,
+                "dbc:bitLength": sig.length,  # fixed spelling
                 "dbc:bitStart": sig.start,
                 "dbc:signed": str(sig.is_signed).lower(),
-                "qudt:byteOrder": "LittleEndian" if sig.byte_order == "little_endian" else "BigEndian",
+                "qudt:byteOrder": (
+                    "LittleEndian" if sig.byte_order == "little_endian" else "BigEndian"
+                ),
                 "qudt:conversionMultiplier": sig.scale if sig.scale is not None else 1,
                 "qudt:conversionOffset": sig.offset if sig.offset is not None else 0,
                 "qudt:maxInclusive": sig.maximum if sig.maximum is not None else "",
@@ -109,7 +119,10 @@ def parse_dbc(file_path, unit_map):
             })
 
     # NODE ENTRIES
-    node_list = [{"Individual": n, "rdf:type": "dbc:Node"} for n in sorted(nodes_data)]
+    node_list = [
+        {"Individual": n, "rdf:type": "dbc:Node"}
+        for n in sorted(nodes_data)
+    ]
 
     return signals_data, messages_data, encodings_data, node_list
 
@@ -118,7 +131,7 @@ def parse_dbc(file_path, unit_map):
 # STATIC TABLES
 # ---------------------------------------------------
 
-def get_platform_data():
+def get_platform_data() -> list:
     return [{
         "Individual": CAN_PLATFORM,
         "rdf:type": "sosa:Platform",
@@ -126,14 +139,13 @@ def get_platform_data():
     }]
 
 
-def get_sensor_data(observed_messages: list):
-    observed_str = ", ".join(observed_messages)
+def get_sensor_data(observed_messages: list) -> list:
     return [{
         "Individual": SNIFFING_SENSOR,
         "rdf:type": "sosa:Sensor",
         "sosa:isHostedBy": CAN_PLATFORM,
         "sosa:madeObservation": "NA",
-        "sosa:observes": observed_str
+        "sosa:observes": ", ".join(observed_messages)
     }]
 
 
@@ -141,12 +153,21 @@ def get_sensor_data(observed_messages: list):
 # KGM EXCEL WRITING
 # ---------------------------------------------------
 
-def append_to_existing_sheet(data, excel_path, sheet_name, columns):
+def append_to_existing_sheet(
+    data: list,
+    excel_path: str,
+    sheet_name: str,
+    columns: list
+):
+    """Append rows to an existing sheet of an Excel workbook."""
     df = pd.DataFrame(data, columns=columns)
 
     book = load_workbook(excel_path)
+
     if sheet_name not in book.sheetnames:
-        raise ValueError(f"❌ Sheet '{sheet_name}' not found in '{excel_path}'")
+        raise ValueError(
+            f"❌ Sheet '{sheet_name}' not found in '{excel_path}'"
+        )
 
     sheet = book[sheet_name]
     start_row = sheet.max_row + 1
@@ -156,7 +177,10 @@ def append_to_existing_sheet(data, excel_path, sheet_name, columns):
             sheet.cell(row=r_idx, column=c_idx, value=value)
 
     book.save(excel_path)
-    print(f"✅ Appended {len(df)} rows to '{excel_path}' → sheet '{sheet_name}', starting at row {start_row}")
+    print(
+        f"✅ Appended {len(df)} rows to '{excel_path}' → "
+        f"sheet '{sheet_name}', starting at row {start_row}"
+    )
 
 
 # ---------------------------------------------------
@@ -165,9 +189,11 @@ def append_to_existing_sheet(data, excel_path, sheet_name, columns):
 
 if __name__ == "__main__":
 
-    # Copy the template to output
+    # Prepare Excel output
     if not os.path.exists(INPUT_TEMPLATE):
-        raise FileNotFoundError(f"❌ Template Excel file not found: {INPUT_TEMPLATE}")
+        raise FileNotFoundError(
+            f"❌ Template Excel file not found: {INPUT_TEMPLATE}"
+        )
 
     shutil.copyfile(INPUT_TEMPLATE, OUTPUT_EXCEL)
     print(f"📄 Created working Excel file: {OUTPUT_EXCEL}\n")
@@ -183,34 +209,48 @@ if __name__ == "__main__":
     sensors = get_sensor_data([m["Individual"] for m in messages])
 
     # Append each dataset
-    append_to_existing_sheet(signals, OUTPUT_EXCEL, "Signal",
-        ["Individual", "rdf:type", "dbc:decodedVia", "dbc:hasReceiver", "dbc:isPartOf",
-         "qudt:hasUnit", "sosa:isObservedBy"]
+    append_to_existing_sheet(
+        signals, OUTPUT_EXCEL, "Signal",
+        [
+            "Individual", "rdf:type", "dbc:decodedVia", "dbc:hasReceiver",
+            "dbc:isPartOf", "qudt:hasUnit", "sosa:isObservedBy"
+        ]
     )
 
-    append_to_existing_sheet(messages, OUTPUT_EXCEL, "Message",
-        ["Individual", "rdf:type", "dbc:dataLength", "dbc:encodedVia", "dbc:hasDecID",
-         "dbc:hasSignal", "dbc:hasTransmitter", "sosa:isObservedBy"]
+    append_to_existing_sheet(
+        messages, OUTPUT_EXCEL, "Message",
+        [
+            "Individual", "rdf:type", "dbc:dataLength", "dbc:encodedVia",
+            "dbc:hasDecID", "dbc:hasSignal", "dbc:hasTransmitter",
+            "sosa:isObservedBy"
+        ]
     )
 
-    append_to_existing_sheet(encodings, OUTPUT_EXCEL, "SignalEncoding",
-        ["Individual", "rdf:type", "dbc:bitLenght", "dbc:bitStart", "dbc:signed",
-         "qudt:byteOrder", "qudt:conversionMultiplier", "qudt:conversionOffset",
-         "qudt:maxInclusive", "qudt:minInclusive"]
+    append_to_existing_sheet(
+        encodings, OUTPUT_EXCEL, "SignalEncoding",
+        [
+            "Individual", "rdf:type", "dbc:bitLength", "dbc:bitStart",
+            "dbc:signed", "qudt:byteOrder", "qudt:conversionMultiplier",
+            "qudt:conversionOffset", "qudt:maxInclusive", "qudt:minInclusive"
+        ]
     )
 
-    append_to_existing_sheet(platforms, OUTPUT_EXCEL, "Platform",
+    append_to_existing_sheet(
+        platforms, OUTPUT_EXCEL, "Platform",
         ["Individual", "rdf:type", "sosa:hosts"]
     )
 
-    append_to_existing_sheet(nodes, OUTPUT_EXCEL, "Node",
+    append_to_existing_sheet(
+        nodes, OUTPUT_EXCEL, "Node",
         ["Individual", "rdf:type"]
     )
 
-    append_to_existing_sheet(sensors, OUTPUT_EXCEL, "Sensor",
-        ["Individual", "rdf:type", "sosa:isHostedBy", "sosa:madeObservation", "sosa:observes"]
+    append_to_existing_sheet(
+        sensors, OUTPUT_EXCEL, "Sensor",
+        [
+            "Individual", "rdf:type", "sosa:isHostedBy",
+            "sosa:madeObservation", "sosa:observes"
+        ]
     )
 
     print("\n🎉 KGM.xlsx generated successfully!")
-
-
