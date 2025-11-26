@@ -25,7 +25,7 @@
         <owl:imports rdf:resource="http://qudt.org/3.0.0/schema/qudt"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/sosa/"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/ssn/"/>
-        <dct:bibliographicCitation>Pavle Ivanovic, Maria Maleshkova (2025): DBC – CAN Database Ontology. https://doi.org/10.5281/zenodo.17671852</dct:bibliographicCitation>
+        <dct:bibliographicCitation>Pavle Ivanovic, Maria Maleshkova (2025): DBC – CAN Database Ontology. https://doi.org/10.5281/zenodo.17671851</dct:bibliographicCitation>
         <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-06-16</dct:created>
         <dct:creator>
             <rdf:Description>
@@ -45,7 +45,7 @@
         </dct:creator>
         <dct:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
         <dct:title>DBC – CAN Database Ontology</dct:title>
-        <bibo:doi>10.5281/zenodo.17671852</bibo:doi>
+        <bibo:doi>10.5281/zenodo.17671851</bibo:doi>
         <rdfs:comment xml:lang="en">The DBC Ontology provides a semantic model for representing CAN bus messaging, encoding, and observations. It extends the W3C SSN/SOSA ontology to capture CAN database (DBC)-specific concepts such as messages, signals, logs, and ECUs. Designed for the transportation domain, the ontology supports advanced analytics, condition monitoring, predictive maintenance, and real-time diagnostics.</rdfs:comment>
         <foaf:fundedBy rdf:resource="http://example.org/individuals#DTEC"/>
     </owl:Ontology>
