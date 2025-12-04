@@ -1,0 +1,553 @@
+[ {
+  "@id" : "_:genid1",
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Person"
+  } ],
+  "http://xmlns.com/foaf/0.1/homepage" : [ {
+    "@id" : "https://orcid.org/0000-0001-7757-094X"
+  } ],
+  "http://xmlns.com/foaf/0.1/mbox" : [ {
+    "@id" : "mailto:ivanovip@hsu-hh.de"
+  } ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "Pavle Ivanovic"
+  } ]
+}, {
+  "@id" : "_:genid2",
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Person"
+  } ],
+  "http://xmlns.com/foaf/0.1/homepage" : [ {
+    "@id" : "https://orcid.org/0000-0003-3458-4748"
+  } ],
+  "http://xmlns.com/foaf/0.1/mbox" : [ {
+    "@id" : "mailto:maleshkm@hsu-hh.de"
+  } ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "Maria Maleshkova"
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/terms/bibliographicCitation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/ontology/bibo/doi",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://qudt.org/schema/qudt/EndianType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Endian Type"
+  } ]
+}, {
+  "@id" : "http://qudt.org/schema/qudt/byteOrder",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://paitools.github.io/DBCOntology/DBC.owl#SignalEncoding"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "byte order"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://qudt.org/schema/qudt/EndianType"
+  } ]
+}, {
+  "@id" : "http://qudt.org/schema/qudt/conversionMultiplier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "conversion multiplier"
+  } ]
+}, {
+  "@id" : "http://qudt.org/schema/qudt/conversionOffset",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "conversion offset"
+  } ]
+}, {
+  "@id" : "http://qudt.org/schema/qudt/hasUnit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://paitools.github.io/DBCOntology/DBC.owl#Signal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has unit"
+  } ]
+}, {
+  "@id" : "http://qudt.org/schema/qudt/maxInclusive",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "max inclusive"
+  } ]
+}, {
+  "@id" : "http://qudt.org/schema/qudt/minInclusive",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "min inclusive"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/ObservableProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ObservableProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/Observation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Observation"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/Platform",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Platform"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/Sensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Sensor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/System"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/hasSimpleResult",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Observation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has simple result"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/hosts",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Platform"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "hosts"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Sensor"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/isHostedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Sensor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "is hosted by"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Platform"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/isObservedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/ObservableProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "is observed by"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Sensor"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/madeBySensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Observation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "made by sensor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Sensor"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/madeObservation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Sensor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "made observation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Observation"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/observedProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Observation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "observed property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/ObservableProperty"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/observes",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Sensor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "observes"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/ObservableProperty"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/resultTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Observation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "result time"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/Person",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/fundedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/homepage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/mbox",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://paitools.github.io/DBCOntology/DBC.owl",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/terms/bibliographicCitation" : [ {
+    "@value" : "Pavle Ivanovic, Maria Maleshkova (2025): DBC – CAN Database Ontology. https://doi.org/10.5281/zenodo.17671851"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2025-06-16"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@id" : "_:genid1"
+  }, {
+    "@id" : "_:genid2"
+  } ],
+  "http://purl.org/dc/terms/license" : [ {
+    "@id" : "https://creativecommons.org/licenses/by/4.0/"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@value" : "DBC – CAN Database Ontology"
+  } ],
+  "http://purl.org/ontology/bibo/doi" : [ {
+    "@value" : "10.5281/zenodo.17671851"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The DBC Ontology provides a semantic model for representing CAN bus messaging, encoding, and observations. It extends the W3C SSN/SOSA ontology to capture CAN database (DBC)-specific concepts such as messages, signals, logs, and ECUs. Designed for the transportation domain, the ontology supports advanced analytics, condition monitoring, predictive maintenance, and real-time diagnostics."
+  } ],
+  "http://www.w3.org/2002/07/owl#imports" : [ {
+    "@id" : "http://qudt.org/3.0.0/schema/qudt"
+  }, {
+    "@id" : "http://www.w3.org/ns/sosa/"
+  }, {
+    "@id" : "http://www.w3.org/ns/ssn/"
+  } ],
+  "http://xmlns.com/foaf/0.1/fundedBy" : [ {
+    "@id" : "http://example.org/individuals#DTEC"
+  } ]
+}, {
+  "@id" : "https://paitools.github.io/DBCOntology/DBC.owl#Message",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Represents a CAN message definition, including its structure and the set of signals it contains."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Message"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/ObservableProperty"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://paitools.github.io/DBCOntology/DBC.owl#Signal"
+  } ]
+}, {
+  "@id" : "https://paitools.github.io/DBCOntology/DBC.owl#MessageLog",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Represents an observation of a CAN message in raw, encoded form as captured from the bus, including timestamp, identifier, and payload bytes."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Message Log"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Observation"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://paitools.github.io/DBCOntology/DBC.owl#SignalLog"
+  } ]
+}, {
+  "@id" : "https://paitools.github.io/DBCOntology/DBC.owl#Node",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Represents an ECU or logical node on the CAN network that transmits or receives messages or signals."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Node"
+  } ]
+}, {
+  "@id" : "https://paitools.github.io/DBCOntology/DBC.owl#Signal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Represents a decoded physical or logical quantity encoded inside a CAN message. Each signal corresponds to an observable property that can be measured and interpreted."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Signal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/ObservableProperty"
+  } ]
+}, {
+  "@id" : "https://paitools.github.io/DBCOntology/DBC.owl#SignalEncoding",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Describes the metadata required to interpret and decode a CAN signal, including bit position, length, signedness, byte order, and scaling parameters."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Signal Encoding"
+  } ]
+}, {
+  "@id" : "https://paitools.github.io/DBCOntology/DBC.owl#SignalLog",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Represents a decoded observation of a specific CAN signal, derived from a raw MessageLog entry and expressing a physical value with units."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Signal Log"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Observation"
+  } ]
+}, {
+  "@id" : "https://paitools.github.io/DBCOntology/DBC.owl#bitLength",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Specifies the size of the signal in bits within the CAN message payload."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://paitools.github.io/DBCOntology/DBC.owl#SignalEncoding"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "bit length"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ]
+}, {
+  "@id" : "https://paitools.github.io/DBCOntology/DBC.owl#bitStart",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Specifies the starting bit position of the signal within the raw CAN message payload."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://paitools.github.io/DBCOntology/DBC.owl#SignalEncoding"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "bit start"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ]
+}, {
+  "@id" : "https://paitools.github.io/DBCOntology/DBC.owl#dataLength",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Specifies the payload length of the CAN message in bytes."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://paitools.github.io/DBCOntology/DBC.owl#Message"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "data length"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ]
+}, {
+  "@id" : "https://paitools.github.io/DBCOntology/DBC.owl#decodedFrom",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Indicates that a SignalLog is derived by decoding a specific MessageLog observation."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://paitools.github.io/DBCOntology/DBC.owl#SignalLog"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "decoded from"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://paitools.github.io/DBCOntology/DBC.owl#MessageLog"
+  } ]
+}, {
+  "@id" : "https://paitools.github.io/DBCOntology/DBC.owl#decodedVia",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Links a CAN signal definition to the SignalEncoding that defines how its bit-level representation is decoded into a physical or logical value."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://paitools.github.io/DBCOntology/DBC.owl#Signal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "decoded via"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://paitools.github.io/DBCOntology/DBC.owl#SignalEncoding"
+  } ]
+}, {
+  "@id" : "https://paitools.github.io/DBCOntology/DBC.owl#encodedVia",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Links a CAN message definition to the SignalEncoding that specifies how its payload bytes are structured and interpreted."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://paitools.github.io/DBCOntology/DBC.owl#Message"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "encoded via"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://paitools.github.io/DBCOntology/DBC.owl#SignalEncoding"
+  } ]
+}, {
+  "@id" : "https://paitools.github.io/DBCOntology/DBC.owl#hasDecID",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Assigns the CAN identifier of the message in decimal notation."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://paitools.github.io/DBCOntology/DBC.owl#Message"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "decimal ID"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ]
+}, {
+  "@id" : "https://paitools.github.io/DBCOntology/DBC.owl#hasHexID",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Stores the CAN identifier of a logged message in hexadecimal notation, as extracted from the CAN frame."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://paitools.github.io/DBCOntology/DBC.owl#MessageLog"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "hexadecimal ID"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://paitools.github.io/DBCOntology/DBC.owl#hasReceiver",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Links a CAN signal definition to the node (ECU) that consumes or interprets this signal."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://paitools.github.io/DBCOntology/DBC.owl#Signal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has receiver"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://paitools.github.io/DBCOntology/DBC.owl#Node"
+  } ]
+}, {
+  "@id" : "https://paitools.github.io/DBCOntology/DBC.owl#hasSignal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Indicates that a CAN message contains a particular signal within its payload structure."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://paitools.github.io/DBCOntology/DBC.owl#Message"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has signal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://paitools.github.io/DBCOntology/DBC.owl#Signal"
+  } ]
+}, {
+  "@id" : "https://paitools.github.io/DBCOntology/DBC.owl#hasTransmitter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Links a CAN message definition to the node (ECU) responsible for transmitting it on the bus."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://paitools.github.io/DBCOntology/DBC.owl#Message"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has transmitter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://paitools.github.io/DBCOntology/DBC.owl#Node"
+  } ]
+}, {
+  "@id" : "https://paitools.github.io/DBCOntology/DBC.owl#isPartOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Indicates that a signal is a structural component of a particular CAN message definition."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://paitools.github.io/DBCOntology/DBC.owl#Signal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "is part of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://paitools.github.io/DBCOntology/DBC.owl#Message"
+  } ]
+}, {
+  "@id" : "https://paitools.github.io/DBCOntology/DBC.owl#observedOn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Links a MessageLog observation to the CAN bus (modeled as a sosa:Platform) on which the message was observed."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://paitools.github.io/DBCOntology/DBC.owl#MessageLog"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "observed on"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Platform"
+  } ]
+}, {
+  "@id" : "https://paitools.github.io/DBCOntology/DBC.owl#signed",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Indicates whether the encoded signal uses signed numerical representation (true) or unsigned (false)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://paitools.github.io/DBCOntology/DBC.owl#SignalEncoding"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "signed"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+} ]

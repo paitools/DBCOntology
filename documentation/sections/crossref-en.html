@@ -1,0 +1,884 @@
+<h2 id="crossreference" class="list">Cross-reference for DBC – CAN Database Ontology classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by DBC – CAN Database Ontology.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Classes</h3>
+ <ul class="hlist">
+  <li><a href="#http://qudt.org/schema/qudt/EndianType" title="http://qudt.org/schema/qudt/EndianType">Endian Type</a></li>
+  <li><a href="#Message" title="https://paitools.github.io/DBCOntology/DBC.owl#Message">Message</a></li>
+  <li><a href="#MessageLog" title="https://paitools.github.io/DBCOntology/DBC.owl#MessageLog">Message Log</a></li>
+  <li><a href="#Node" title="https://paitools.github.io/DBCOntology/DBC.owl#Node">Node</a></li>
+  <li><a href="#http://www.w3.org/ns/sosa/ObservableProperty" title="http://www.w3.org/ns/sosa/ObservableProperty">ObservableProperty</a></li>
+  <li><a href="#http://www.w3.org/ns/sosa/Observation" title="http://www.w3.org/ns/sosa/Observation">Observation</a></li>
+  <li><a href="#http://www.w3.org/ns/sosa/Platform" title="http://www.w3.org/ns/sosa/Platform">Platform</a></li>
+  <li><a href="#http://www.w3.org/ns/sosa/Sensor" title="http://www.w3.org/ns/sosa/Sensor">Sensor</a></li>
+  <li><a href="#Signal" title="https://paitools.github.io/DBCOntology/DBC.owl#Signal">Signal</a></li>
+  <li><a href="#SignalEncoding" title="https://paitools.github.io/DBCOntology/DBC.owl#SignalEncoding">Signal Encoding</a></li>
+  <li><a href="#SignalLog" title="https://paitools.github.io/DBCOntology/DBC.owl#SignalLog">Signal Log</a></li>
+ </ul>
+ <div class="entity" id="http://qudt.org/schema/qudt/EndianType">
+  <h3>Endian Type<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://qudt.org/schema/qudt/EndianType</p>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://qudt.org/schema/qudt/byteOrder" title="http://qudt.org/schema/qudt/byteOrder">byte order</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Message">
+  <h3>Message<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://paitools.github.io/DBCOntology/DBC.owl#Message</p>
+  <div class="comment">
+   <span class="markdown">Represents a CAN message definition, including its structure and the set of signals it contains.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/sosa/ObservableProperty" title="http://www.w3.org/ns/sosa/ObservableProperty">ObservableProperty</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#dataLength" title="https://paitools.github.io/DBCOntology/DBC.owl#dataLength">data length</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasDecID" title="https://paitools.github.io/DBCOntology/DBC.owl#hasDecID">decimal ID</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#encodedVia" title="https://paitools.github.io/DBCOntology/DBC.owl#encodedVia">encoded via</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasSignal" title="https://paitools.github.io/DBCOntology/DBC.owl#hasSignal">has signal</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasTransmitter" title="https://paitools.github.io/DBCOntology/DBC.owl#hasTransmitter">has transmitter</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#isPartOf" title="https://paitools.github.io/DBCOntology/DBC.owl#isPartOf">is part of</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#Signal" title="https://paitools.github.io/DBCOntology/DBC.owl#Signal">Signal</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="MessageLog">
+  <h3>Message Log<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://paitools.github.io/DBCOntology/DBC.owl#MessageLog</p>
+  <div class="comment">
+   <span class="markdown">Represents an observation of a CAN message in raw, encoded form as captured from the bus, including timestamp, identifier, and payload bytes.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/sosa/Observation" title="http://www.w3.org/ns/sosa/Observation">Observation</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasHexID" title="https://paitools.github.io/DBCOntology/DBC.owl#hasHexID">hexadecimal ID</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#observedOn" title="https://paitools.github.io/DBCOntology/DBC.owl#observedOn">observed on</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#decodedFrom" title="https://paitools.github.io/DBCOntology/DBC.owl#decodedFrom">decoded from</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#SignalLog" title="https://paitools.github.io/DBCOntology/DBC.owl#SignalLog">Signal Log</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Node">
+  <h3>Node<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://paitools.github.io/DBCOntology/DBC.owl#Node</p>
+  <div class="comment">
+   <span class="markdown">Represents an ECU or logical node on the CAN network that transmits or receives messages or signals.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasReceiver" title="https://paitools.github.io/DBCOntology/DBC.owl#hasReceiver">has receiver</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasTransmitter" title="https://paitools.github.io/DBCOntology/DBC.owl#hasTransmitter">has transmitter</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/sosa/ObservableProperty">
+  <h3>ObservableProperty<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/sosa/ObservableProperty</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/ssn/Property" target="_blank" title="http://www.w3.org/ns/ssn/Property">Property</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#Message" title="https://paitools.github.io/DBCOntology/DBC.owl#Message">Message</a> <sup class="type-c" title="class">c</sup>, <a href="#Signal" title="https://paitools.github.io/DBCOntology/DBC.owl#Signal">Signal</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/sosa/isObservedBy" title="http://www.w3.org/ns/sosa/isObservedBy">is observed by</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/sosa/observedProperty" title="http://www.w3.org/ns/sosa/observedProperty">observed property</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/ns/sosa/observes" title="http://www.w3.org/ns/sosa/observes">observes</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/sosa/Observation">
+  <h3>Observation<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/sosa/Observation</p>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#MessageLog" title="https://paitools.github.io/DBCOntology/DBC.owl#MessageLog">Message Log</a> <sup class="type-c" title="class">c</sup>, <a href="#SignalLog" title="https://paitools.github.io/DBCOntology/DBC.owl#SignalLog">Signal Log</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/sosa/hasSimpleResult" title="http://www.w3.org/ns/sosa/hasSimpleResult">has simple result</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://www.w3.org/ns/sosa/madeBySensor" title="http://www.w3.org/ns/sosa/madeBySensor">made by sensor</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/ns/sosa/observedProperty" title="http://www.w3.org/ns/sosa/observedProperty">observed property</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/ns/sosa/resultTime" title="http://www.w3.org/ns/sosa/resultTime">result time</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/sosa/madeObservation" title="http://www.w3.org/ns/sosa/madeObservation">made observation</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/sosa/Platform">
+  <h3>Platform<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/sosa/Platform</p>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/sosa/hosts" title="http://www.w3.org/ns/sosa/hosts">hosts</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/sosa/isHostedBy" title="http://www.w3.org/ns/sosa/isHostedBy">is hosted by</a> <sup class="type-op" title="object property">op</sup>, <a href="#observedOn" title="https://paitools.github.io/DBCOntology/DBC.owl#observedOn">observed on</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/sosa/Sensor">
+  <h3>Sensor<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/sosa/Sensor</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/ssn/System" target="_blank" title="http://www.w3.org/ns/ssn/System">System</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/sosa/isHostedBy" title="http://www.w3.org/ns/sosa/isHostedBy">is hosted by</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/ns/sosa/madeObservation" title="http://www.w3.org/ns/sosa/madeObservation">made observation</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/ns/sosa/observes" title="http://www.w3.org/ns/sosa/observes">observes</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/sosa/hosts" title="http://www.w3.org/ns/sosa/hosts">hosts</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/ns/sosa/isObservedBy" title="http://www.w3.org/ns/sosa/isObservedBy">is observed by</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/ns/sosa/madeBySensor" title="http://www.w3.org/ns/sosa/madeBySensor">made by sensor</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Signal">
+  <h3>Signal<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://paitools.github.io/DBCOntology/DBC.owl#Signal</p>
+  <div class="comment">
+   <span class="markdown">Represents a decoded physical or logical quantity encoded inside a CAN message. Each signal corresponds to an observable property that can be measured and interpreted.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/sosa/ObservableProperty" title="http://www.w3.org/ns/sosa/ObservableProperty">ObservableProperty</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#decodedVia" title="https://paitools.github.io/DBCOntology/DBC.owl#decodedVia">decoded via</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasReceiver" title="https://paitools.github.io/DBCOntology/DBC.owl#hasReceiver">has receiver</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://qudt.org/schema/qudt/hasUnit" title="http://qudt.org/schema/qudt/hasUnit">has unit</a> <sup class="type-op" title="object property">op</sup>, <a href="#isPartOf" title="https://paitools.github.io/DBCOntology/DBC.owl#isPartOf">is part of</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasSignal" title="https://paitools.github.io/DBCOntology/DBC.owl#hasSignal">has signal</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#Message" title="https://paitools.github.io/DBCOntology/DBC.owl#Message">Message</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SignalEncoding">
+  <h3>Signal Encoding<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://paitools.github.io/DBCOntology/DBC.owl#SignalEncoding</p>
+  <div class="comment">
+   <span class="markdown">Describes the metadata required to interpret and decode a CAN signal, including bit position, length, signedness, byte order, and scaling parameters.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#bitLength" title="https://paitools.github.io/DBCOntology/DBC.owl#bitLength">bit length</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#bitStart" title="https://paitools.github.io/DBCOntology/DBC.owl#bitStart">bit start</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://qudt.org/schema/qudt/byteOrder" title="http://qudt.org/schema/qudt/byteOrder">byte order</a> <sup class="type-op" title="object property">op</sup>, <a href="#signed" title="https://paitools.github.io/DBCOntology/DBC.owl#signed">signed</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#decodedVia" title="https://paitools.github.io/DBCOntology/DBC.owl#decodedVia">decoded via</a> <sup class="type-op" title="object property">op</sup>, <a href="#encodedVia" title="https://paitools.github.io/DBCOntology/DBC.owl#encodedVia">encoded via</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SignalLog">
+  <h3>Signal Log<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://paitools.github.io/DBCOntology/DBC.owl#SignalLog</p>
+  <div class="comment">
+   <span class="markdown">Represents a decoded observation of a specific CAN signal, derived from a raw MessageLog entry and expressing a physical value with units.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/sosa/Observation" title="http://www.w3.org/ns/sosa/Observation">Observation</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#decodedFrom" title="https://paitools.github.io/DBCOntology/DBC.owl#decodedFrom">decoded from</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#MessageLog" title="https://paitools.github.io/DBCOntology/DBC.owl#MessageLog">Message Log</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+ <h3 id="properties" class="list">Object Properties</h3>
+ <ul class="hlist">
+  <li><a href="#http://qudt.org/schema/qudt/byteOrder" title="http://qudt.org/schema/qudt/byteOrder"> <span>byte order</span> </a></li>
+  <li><a href="#decodedFrom" title="https://paitools.github.io/DBCOntology/DBC.owl#decodedFrom">decoded from</a></li>
+  <li><a href="#decodedVia" title="https://paitools.github.io/DBCOntology/DBC.owl#decodedVia">decoded via</a></li>
+  <li><a href="#encodedVia" title="https://paitools.github.io/DBCOntology/DBC.owl#encodedVia">encoded via</a></li>
+  <li><a href="#hasReceiver" title="https://paitools.github.io/DBCOntology/DBC.owl#hasReceiver">has receiver</a></li>
+  <li><a href="#hasSignal" title="https://paitools.github.io/DBCOntology/DBC.owl#hasSignal">has signal</a></li>
+  <li><a href="#hasTransmitter" title="https://paitools.github.io/DBCOntology/DBC.owl#hasTransmitter">has transmitter</a></li>
+  <li><a href="#http://qudt.org/schema/qudt/hasUnit" title="http://qudt.org/schema/qudt/hasUnit">has unit</a></li>
+  <li><a href="#http://www.w3.org/ns/sosa/hosts" title="http://www.w3.org/ns/sosa/hosts">hosts</a></li>
+  <li><a href="#http://www.w3.org/ns/sosa/isHostedBy" title="http://www.w3.org/ns/sosa/isHostedBy">is hosted by</a></li>
+  <li><a href="#http://www.w3.org/ns/sosa/isObservedBy" title="http://www.w3.org/ns/sosa/isObservedBy">is observed by</a></li>
+  <li><a href="#isPartOf" title="https://paitools.github.io/DBCOntology/DBC.owl#isPartOf">is part of</a></li>
+  <li><a href="#http://www.w3.org/ns/sosa/madeBySensor" title="http://www.w3.org/ns/sosa/madeBySensor">made by sensor</a></li>
+  <li><a href="#http://www.w3.org/ns/sosa/madeObservation" title="http://www.w3.org/ns/sosa/madeObservation">made observation</a></li>
+  <li><a href="#observedOn" title="https://paitools.github.io/DBCOntology/DBC.owl#observedOn">observed on</a></li>
+  <li><a href="#http://www.w3.org/ns/sosa/observedProperty" title="http://www.w3.org/ns/sosa/observedProperty">observed property</a></li>
+  <li><a href="#http://www.w3.org/ns/sosa/observes" title="http://www.w3.org/ns/sosa/observes">observes</a></li>
+ </ul>
+ <div class="entity" id="http://qudt.org/schema/qudt/byteOrder">
+  <h3>byte order<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://qudt.org/schema/qudt/byteOrder</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#SignalEncoding" title="https://paitools.github.io/DBCOntology/DBC.owl#SignalEncoding">Signal Encoding</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://qudt.org/schema/qudt/EndianType" title="http://qudt.org/schema/qudt/EndianType">Endian Type</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is also defined as
+    </dt>
+    <dd>
+     data property
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="decodedFrom">
+  <h3>decoded from<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://paitools.github.io/DBCOntology/DBC.owl#decodedFrom</p>
+  <div class="comment">
+   <span class="markdown">Indicates that a SignalLog is derived by decoding a specific MessageLog observation.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#SignalLog" title="https://paitools.github.io/DBCOntology/DBC.owl#SignalLog">Signal Log</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#MessageLog" title="https://paitools.github.io/DBCOntology/DBC.owl#MessageLog">Message Log</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="decodedVia">
+  <h3>decoded via<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://paitools.github.io/DBCOntology/DBC.owl#decodedVia</p>
+  <div class="comment">
+   <span class="markdown">Links a CAN signal definition to the SignalEncoding that defines how its bit-level representation is decoded into a physical or logical value.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Signal" title="https://paitools.github.io/DBCOntology/DBC.owl#Signal">Signal</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#SignalEncoding" title="https://paitools.github.io/DBCOntology/DBC.owl#SignalEncoding">Signal Encoding</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="encodedVia">
+  <h3>encoded via<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://paitools.github.io/DBCOntology/DBC.owl#encodedVia</p>
+  <div class="comment">
+   <span class="markdown">Links a CAN message definition to the SignalEncoding that specifies how its payload bytes are structured and interpreted.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Message" title="https://paitools.github.io/DBCOntology/DBC.owl#Message">Message</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#SignalEncoding" title="https://paitools.github.io/DBCOntology/DBC.owl#SignalEncoding">Signal Encoding</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasReceiver">
+  <h3>has receiver<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://paitools.github.io/DBCOntology/DBC.owl#hasReceiver</p>
+  <div class="comment">
+   <span class="markdown">Links a CAN signal definition to the node (ECU) that consumes or interprets this signal.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Signal" title="https://paitools.github.io/DBCOntology/DBC.owl#Signal">Signal</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Node" title="https://paitools.github.io/DBCOntology/DBC.owl#Node">Node</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasSignal">
+  <h3>has signal<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://paitools.github.io/DBCOntology/DBC.owl#hasSignal</p>
+  <div class="comment">
+   <span class="markdown">Indicates that a CAN message contains a particular signal within its payload structure.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Message" title="https://paitools.github.io/DBCOntology/DBC.owl#Message">Message</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Signal" title="https://paitools.github.io/DBCOntology/DBC.owl#Signal">Signal</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasTransmitter">
+  <h3>has transmitter<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://paitools.github.io/DBCOntology/DBC.owl#hasTransmitter</p>
+  <div class="comment">
+   <span class="markdown">Links a CAN message definition to the node (ECU) responsible for transmitting it on the bus.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Message" title="https://paitools.github.io/DBCOntology/DBC.owl#Message">Message</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Node" title="https://paitools.github.io/DBCOntology/DBC.owl#Node">Node</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://qudt.org/schema/qudt/hasUnit">
+  <h3>has unit<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://qudt.org/schema/qudt/hasUnit</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Signal" title="https://paitools.github.io/DBCOntology/DBC.owl#Signal">Signal</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/sosa/hosts">
+  <h3>hosts<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/sosa/hosts</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/ns/sosa/Platform" title="http://www.w3.org/ns/sosa/Platform">Platform</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/ns/sosa/Sensor" title="http://www.w3.org/ns/sosa/Sensor">Sensor</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/sosa/isHostedBy">
+  <h3>is hosted by<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/sosa/isHostedBy</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/ns/sosa/Sensor" title="http://www.w3.org/ns/sosa/Sensor">Sensor</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/ns/sosa/Platform" title="http://www.w3.org/ns/sosa/Platform">Platform</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/sosa/isObservedBy">
+  <h3>is observed by<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/sosa/isObservedBy</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/ns/sosa/ObservableProperty" title="http://www.w3.org/ns/sosa/ObservableProperty">ObservableProperty</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/ns/sosa/Sensor" title="http://www.w3.org/ns/sosa/Sensor">Sensor</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="isPartOf">
+  <h3>is part of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://paitools.github.io/DBCOntology/DBC.owl#isPartOf</p>
+  <div class="comment">
+   <span class="markdown">Indicates that a signal is a structural component of a particular CAN message definition.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Signal" title="https://paitools.github.io/DBCOntology/DBC.owl#Signal">Signal</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Message" title="https://paitools.github.io/DBCOntology/DBC.owl#Message">Message</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/sosa/madeBySensor">
+  <h3>made by sensor<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/sosa/madeBySensor</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/ns/sosa/Observation" title="http://www.w3.org/ns/sosa/Observation">Observation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/ns/sosa/Sensor" title="http://www.w3.org/ns/sosa/Sensor">Sensor</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/sosa/madeObservation">
+  <h3>made observation<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/sosa/madeObservation</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/ns/sosa/Sensor" title="http://www.w3.org/ns/sosa/Sensor">Sensor</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/ns/sosa/Observation" title="http://www.w3.org/ns/sosa/Observation">Observation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="observedOn">
+  <h3>observed on<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://paitools.github.io/DBCOntology/DBC.owl#observedOn</p>
+  <div class="comment">
+   <span class="markdown">Links a MessageLog observation to the CAN bus (modeled as a sosa:Platform) on which the message was observed.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#MessageLog" title="https://paitools.github.io/DBCOntology/DBC.owl#MessageLog">Message Log</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/ns/sosa/Platform" title="http://www.w3.org/ns/sosa/Platform">Platform</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/sosa/observedProperty">
+  <h3>observed property<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/sosa/observedProperty</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/ns/sosa/Observation" title="http://www.w3.org/ns/sosa/Observation">Observation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/ns/sosa/ObservableProperty" title="http://www.w3.org/ns/sosa/ObservableProperty">ObservableProperty</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/sosa/observes">
+  <h3>observes<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/sosa/observes</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/ns/sosa/Sensor" title="http://www.w3.org/ns/sosa/Sensor">Sensor</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/ns/sosa/ObservableProperty" title="http://www.w3.org/ns/sosa/ObservableProperty">ObservableProperty</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+ <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+ <ul class="hlist">
+  <li><a href="#bitLength" title="https://paitools.github.io/DBCOntology/DBC.owl#bitLength">bit length</a></li>
+  <li><a href="#bitStart" title="https://paitools.github.io/DBCOntology/DBC.owl#bitStart">bit start</a></li>
+  <li><a href="#http://qudt.org/schema/qudt/conversionMultiplier" title="http://qudt.org/schema/qudt/conversionMultiplier">conversion multiplier</a></li>
+  <li><a href="#http://qudt.org/schema/qudt/conversionOffset" title="http://qudt.org/schema/qudt/conversionOffset">conversion offset</a></li>
+  <li><a href="#dataLength" title="https://paitools.github.io/DBCOntology/DBC.owl#dataLength">data length</a></li>
+  <li><a href="#hasDecID" title="https://paitools.github.io/DBCOntology/DBC.owl#hasDecID">decimal ID</a></li>
+  <li><a href="#http://www.w3.org/ns/sosa/hasSimpleResult" title="http://www.w3.org/ns/sosa/hasSimpleResult">has simple result</a></li>
+  <li><a href="#hasHexID" title="https://paitools.github.io/DBCOntology/DBC.owl#hasHexID">hexadecimal ID</a></li>
+  <li><a href="#http://qudt.org/schema/qudt/maxInclusive" title="http://qudt.org/schema/qudt/maxInclusive">max inclusive</a></li>
+  <li><a href="#http://qudt.org/schema/qudt/minInclusive" title="http://qudt.org/schema/qudt/minInclusive">min inclusive</a></li>
+  <li><a href="#http://www.w3.org/ns/sosa/resultTime" title="http://www.w3.org/ns/sosa/resultTime">result time</a></li>
+  <li><a href="#signed" title="https://paitools.github.io/DBCOntology/DBC.owl#signed">signed</a></li>
+ </ul>
+ <div class="entity" id="bitLength">
+  <h3>bit length<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://paitools.github.io/DBCOntology/DBC.owl#bitLength</p>
+  <div class="comment">
+   <span class="markdown">Specifies the size of the signal in bits within the CAN message payload.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#SignalEncoding" title="https://paitools.github.io/DBCOntology/DBC.owl#SignalEncoding">Signal Encoding</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="bitStart">
+  <h3>bit start<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://paitools.github.io/DBCOntology/DBC.owl#bitStart</p>
+  <div class="comment">
+   <span class="markdown">Specifies the starting bit position of the signal within the raw CAN message payload.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#SignalEncoding" title="https://paitools.github.io/DBCOntology/DBC.owl#SignalEncoding">Signal Encoding</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://qudt.org/schema/qudt/conversionMultiplier">
+  <h3>conversion multiplier<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://qudt.org/schema/qudt/conversionMultiplier</p>
+ </div>
+ <div class="entity" id="http://qudt.org/schema/qudt/conversionOffset">
+  <h3>conversion offset<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://qudt.org/schema/qudt/conversionOffset</p>
+ </div>
+ <div class="entity" id="dataLength">
+  <h3>data length<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://paitools.github.io/DBCOntology/DBC.owl#dataLength</p>
+  <div class="comment">
+   <span class="markdown">Specifies the payload length of the CAN message in bytes.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Message" title="https://paitools.github.io/DBCOntology/DBC.owl#Message">Message</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasDecID">
+  <h3>decimal ID<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://paitools.github.io/DBCOntology/DBC.owl#hasDecID</p>
+  <div class="comment">
+   <span class="markdown">Assigns the CAN identifier of the message in decimal notation.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Message" title="https://paitools.github.io/DBCOntology/DBC.owl#Message">Message</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/sosa/hasSimpleResult">
+  <h3>has simple result<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/sosa/hasSimpleResult</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/ns/sosa/Observation" title="http://www.w3.org/ns/sosa/Observation">Observation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasHexID">
+  <h3>hexadecimal ID<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://paitools.github.io/DBCOntology/DBC.owl#hasHexID</p>
+  <div class="comment">
+   <span class="markdown">Stores the CAN identifier of a logged message in hexadecimal notation, as extracted from the CAN frame.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#MessageLog" title="https://paitools.github.io/DBCOntology/DBC.owl#MessageLog">Message Log</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://qudt.org/schema/qudt/maxInclusive">
+  <h3>max inclusive<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://qudt.org/schema/qudt/maxInclusive</p>
+ </div>
+ <div class="entity" id="http://qudt.org/schema/qudt/minInclusive">
+  <h3>min inclusive<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://qudt.org/schema/qudt/minInclusive</p>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/sosa/resultTime">
+  <h3>result time<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/sosa/resultTime</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/ns/sosa/Observation" title="http://www.w3.org/ns/sosa/Observation">Observation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#dateTime" target="_blank" title="http://www.w3.org/2001/XMLSchema#dateTime">date Time</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="signed">
+  <h3>signed<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://paitools.github.io/DBCOntology/DBC.owl#signed</p>
+  <div class="comment">
+   <span class="markdown">Indicates whether the encoded signal uses signed numerical representation (true) or unsigned (false).</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#SignalEncoding" title="https://paitools.github.io/DBCOntology/DBC.owl#SignalEncoding">Signal Encoding</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+</div>
+</div>
