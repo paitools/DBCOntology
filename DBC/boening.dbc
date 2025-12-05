@@ -9,153 +9,153 @@ BU_: Boening
 
 
 BO_ 2566848513 BoeningI: 8 Vector__XXX
- SG_ Kraftstofftank01 : 0|16@1+ (1,0) [0|65535] "L" Vector__XXX
- SG_ Kraftstofftank02 : 16|16@1+ (1,0) [0|65535] "L" Vector__XXX
- SG_ Kraftstofftank05 : 32|16@1+ (1,0) [0|65535] "L" Vector__XXX
- SG_ Kraftstofftank06 : 48|16@1+ (1,0) [0|65535] "L" Vector__XXX
+ SG_ FuelTank01 : 0|16@1+ (1,0) [0|65535] "L" Vector__XXX
+ SG_ FuelTank02 : 16|16@1+ (1,0) [0|65535] "L" Vector__XXX
+ SG_ FuelTank05 : 32|16@1+ (1,0) [0|65535] "L" Vector__XXX
+ SG_ FuelTank06 : 48|16@1+ (1,0) [0|65535] "L" Vector__XXX
 
 BO_ 2566848769 BoeningII: 8 Vector__XXX
- SG_ Kraftstofftank07 : 0|16@1+ (1,0) [0|65535] "L" Vector__XXX
- SG_ Kraftstofftank08 : 16|16@1+ (1,0) [0|65535] "L" Vector__XXX
- SG_ Kraftstofftank15 : 32|16@1+ (1,0) [0|65535] "L" Vector__XXX
- SG_ Bilgenwassertank12 : 48|16@1+ (1,0) [0|65535] "L" Vector__XXX
+ SG_ FuelTank07 : 0|16@1+ (1,0) [0|65535] "L" Vector__XXX
+ SG_ FuelTank08 : 16|16@1+ (1,0) [0|65535] "L" Vector__XXX
+ SG_ FuelTank15 : 32|16@1+ (1,0) [0|65535] "L" Vector__XXX
+ SG_ BilgeWaterTank12 : 48|16@1+ (1,0) [0|65535] "L" Vector__XXX
 
 BO_ 2566849025 BoeningIII: 8 Vector__XXX
- SG_ Frischwassertank14 : 0|16@1+ (1,0) [0|65535] "L" Vector__XXX
- SG_ Schraeglagesensor : 16|16@1- (1,0) [-32768|32767] "grad" Vector__XXX
- SG_ MaschinenraumTemperatur : 32|16@1+ (1,0) [0|65535] "grad Celsius" Vector__XXX
- SG_ DruckFeuerloeschpumpe : 48|16@1+ (0.1,0) [0|6553.5] "bar" Vector__XXX
+ SG_ FreshwaterTank14 : 0|16@1+ (1,0) [0|65535] "L" Vector__XXX
+ SG_ Inclination : 16|16@1- (1,0) [-32768|32767] "grad" Vector__XXX
+ SG_ EngineRoomTemperature : 32|16@1+ (1,0) [0|65535] "grad Celsius" Vector__XXX
+ SG_ FirePumpPressure : 48|16@1+ (0.1,0) [0|6553.5] "bar" Vector__XXX
 
 BO_ 2566849281 BoeningIV: 8 Vector__XXX
- SG_ StromLichtmaschineHauptmotorBb : 0|16@1+ (1,0) [0|65535] "A" Vector__XXX
- SG_ GetriebeBbSchmieroelTemperatur : 16|16@1+ (1,0) [0|65535] "grad Celsius" Vector__XXX
- SG_ StromLichtmaschineHauptmotorStb : 32|16@1+ (1,0) [0|65535] "A" Vector__XXX
- SG_ GetriebeStbSchmieroelTemperatur : 48|16@1+ (1,0) [0|65535] "grad Celsius" Vector__XXX
+ SG_ PortEngineAlternatorCurrent : 0|16@1+ (1,0) [0|65535] "A" Vector__XXX
+ SG_ PortGearboxLubOilTemperature : 16|16@1+ (1,0) [0|65535] "grad Celsius" Vector__XXX
+ SG_ StarboardEngineAlternatorCurrent : 32|16@1+ (1,0) [0|65535] "A" Vector__XXX
+ SG_ StarboardGearboxLubOilTemperature : 48|16@1+ (1,0) [0|65535] "grad Celsius" Vector__XXX
 
 BO_ 2566849537 BoeningV: 8 Vector__XXX
- SG_ SpannungAutomationsbatterie : 0|16@1- (0.1,0) [-3276.8|3276.7] "V" Vector__XXX
- SG_ StromAutomationsbatterie : 16|16@1- (0.1,0) [-3276.8|3276.7] "A" Vector__XXX
- SG_ SpannungBrueckenbatterie : 32|16@1- (0.1,0) [-3276.8|3276.7] "V" Vector__XXX
- SG_ StromBrueckenbatterie : 48|16@1- (0.1,0) [-3276.8|3276.7] "A" Vector__XXX
+ SG_ AutomationBatteryVoltage : 0|16@1- (0.1,0) [-3276.8|3276.7] "V" Vector__XXX
+ SG_ AutomationBatteryCurrent : 16|16@1- (0.1,0) [-3276.8|3276.7] "A" Vector__XXX
+ SG_ BridgeBatteryVoltage : 32|16@1- (0.1,0) [-3276.8|3276.7] "V" Vector__XXX
+ SG_ BridgeBatteryCurrent : 48|16@1- (0.1,0) [-3276.8|3276.7] "A" Vector__XXX
 
 BO_ 2566849793 BoeningVI: 8 Vector__XXX
- SG_ KraftstoffGesamt : 0|16@1+ (1,0) [0|65535] "L" Vector__XXX
- SG_ DrehzahlLuefterStb : 16|16@1+ (1,0) [0|65535] "1/min" Vector__XXX
- SG_ DrehzahlLuefterBb : 32|16@1+ (1,0) [0|65535] "%" Vector__XXX
+ SG_ FuelTotal : 0|16@1+ (1,0) [0|65535] "L" Vector__XXX
+ SG_ StarboardFanRotationSpeed : 16|16@1+ (1,0) [0|65535] "1/min" Vector__XXX
+ SG_ PortFanRotationSpeed : 32|16@1+ (1,0) [0|65535] "%" Vector__XXX
 
 BO_ 2566850049 BoeningVII: 8 Vector__XXX
- SG_ StromL1Landanschluss : 0|16@1+ (0.1,0) [0|6553.5] "A" Vector__XXX
- SG_ StromL2Landanschluss : 16|16@1+ (0.1,0) [0|6553.5] "A" Vector__XXX
- SG_ StromL3Landanschluss : 32|16@1+ (0.1,0) [0|6553.5] "A" Vector__XXX
- SG_ WirkleistungLandanschluss : 48|16@1+ (1,0) [0|65535] "kW" Vector__XXX
+ SG_ ShoreConnectionCurrentL1 : 0|16@1+ (0.1,0) [0|6553.5] "A" Vector__XXX
+ SG_ ShoreConnectionCurrentL2 : 16|16@1+ (0.1,0) [0|6553.5] "A" Vector__XXX
+ SG_ ShoreConnectionCurrentL3 : 32|16@1+ (0.1,0) [0|6553.5] "A" Vector__XXX
+ SG_ ShoreConnectionActivePower : 48|16@1+ (1,0) [0|65535] "kW" Vector__XXX
 
 BO_ 2566850305 BoeningVIII: 8 Vector__XXX
- SG_ VerbrauchLandanschluss : 0|32@1+ (1,0) [0|4294967295] "kWh" Vector__XXX
- SG_ SpannungLandanschluss : 32|16@1+ (1,0) [0|65535] "V" Vector__XXX
- SG_ FrequenzLandanschluss : 48|16@1+ (0.1,0) [0|6553.5] "Hz" Vector__XXX
+ SG_ ShoreConnectionConsumption : 0|32@1+ (1,0) [0|4294967295] "kWh" Vector__XXX
+ SG_ ShoreConnectionVoltage : 32|16@1+ (1,0) [0|65535] "V" Vector__XXX
+ SG_ ShoreConnectionFrequency : 48|16@1+ (0.1,0) [0|6553.5] "Hz" Vector__XXX
 
 BO_ 2566850561 BoeningIX: 8 Vector__XXX
- SG_ LeistungHDGross : 0|16@1+ (1,0) [0|65535] "kW" Vector__XXX
- SG_ BelastungHDGross : 16|16@1+ (1,0) [0|65535] "%" Vector__XXX
- SG_ StromL1HDGross : 32|16@1+ (0.1,0) [0|6553.5] "A" Vector__XXX
- SG_ StromL2HDGross : 48|16@1+ (0.1,0) [0|6553.5] "A" Vector__XXX
+ SG_ LargeAuxDieselEnginePower : 0|16@1+ (1,0) [0|65535] "kW" Vector__XXX
+ SG_ LargeAuxDieselEngineLoad : 16|16@1+ (1,0) [0|65535] "%" Vector__XXX
+ SG_ LargeAuxDieselEngineCurrentL1 : 32|16@1+ (0.1,0) [0|6553.5] "A" Vector__XXX
+ SG_ LargeAuxDieselEngineCurrentL2 : 48|16@1+ (0.1,0) [0|6553.5] "A" Vector__XXX
 
 BO_ 2566850817 BoeningX: 8 Vector__XXX
- SG_ StromL3HDGross : 0|16@1+ (0.1,0) [0|6553.5] "A" Vector__XXX
- SG_ SpannungHDGross : 16|16@1+ (1,0) [0|65535] "V" Vector__XXX
- SG_ FrequenzHDGross : 32|16@1+ (0.1,0) [0|6553.5] "Hz" Vector__XXX
+ SG_ LargeAuxDieselEngineCurrentL3 : 0|16@1+ (0.1,0) [0|6553.5] "A" Vector__XXX
+ SG_ LargeAuxDieselEngineVoltage : 16|16@1+ (1,0) [0|65535] "V" Vector__XXX
+ SG_ LargeAuxDieselEngineFrequency : 32|16@1+ (0.1,0) [0|6553.5] "Hz" Vector__XXX
 
 BO_ 2566851073 BoeningXI: 8 Vector__XXX
- SG_ LeistungHDKlein : 0|16@1+ (1,0) [0|65535] "kW" Vector__XXX
- SG_ BelastungHDKlein : 16|16@1+ (1,0) [0|65535] "%" Vector__XXX
- SG_ StromL1HDKlein : 32|16@1+ (0.1,0) [0|6553.5] "A" Vector__XXX
- SG_ StromL2HDKlein : 48|16@1+ (0.1,0) [0|6553.5] "A" Vector__XXX
+ SG_ SmallAuxDieselEnginePower : 0|16@1+ (1,0) [0|65535] "kW" Vector__XXX
+ SG_ SmallAuxDieselEngineLoad : 16|16@1+ (1,0) [0|65535] "%" Vector__XXX
+ SG_ SmallAuxDieselEngineCurrentL1 : 32|16@1+ (0.1,0) [0|6553.5] "A" Vector__XXX
+ SG_ SmallAuxDieselEngineCurrentL2 : 48|16@1+ (0.1,0) [0|6553.5] "A" Vector__XXX
 
 BO_ 2566851329 BoeningXII: 8 Vector__XXX
- SG_ StromL3HDKlein : 0|16@1+ (0.1,0) [0|6553.5] "A" Vector__XXX
- SG_ SpannungHDKlein : 16|16@1+ (1,0) [0|65535] "V" Vector__XXX
- SG_ FrequenzHDKlein : 32|16@1+ (0.1,0) [0|6553.5] "Hz" Vector__XXX
+ SG_ SmallAuxDieselEngineCurrentL3 : 0|16@1+ (0.1,0) [0|6553.5] "A" Vector__XXX
+ SG_ SmallAuxDieselEngineVoltage : 16|16@1+ (1,0) [0|65535] "V" Vector__XXX
+ SG_ SmallAuxDieselEngineFrequency : 32|16@1+ (0.1,0) [0|6553.5] "Hz" Vector__XXX
 
 BO_ 2566851585 BoeningXIII: 8 Vector__XXX
- SG_ SchmieroeldruckHDKlein : 0|16@1+ (0.1,0) [0|6553.5] "bar" Vector__XXX
- SG_ KuehlwassertemperaturHDKlein : 16|16@1+ (1,0) [0|65535] "grad Celsius" Vector__XXX
+ SG_ SmallAuxDieselEngineLubOilPressure : 0|16@1+ (0.1,0) [0|6553.5] "bar" Vector__XXX
+ SG_ SmallAuxDieselEngineCoolWaterTemperature : 16|16@1+ (1,0) [0|65535] "grad Celsius" Vector__XXX
 
 BO_ 2566851841 BoeningXIV: 8 Vector__XXX
- SG_ Abwassertank25Prozent : 0|1@1+ (1,0) [0|1] "aus/an" Vector__XXX
- SG_ Abwassertank50Prozent : 1|1@1+ (1,0) [0|1] "aus/an" Vector__XXX
- SG_ Abwassertank75Prozent : 2|1@1+ (1,0) [0|1] "aus/an" Vector__XXX
- SG_ Abwassertank90Prozent : 3|1@1+ (1,0) [0|1] "aus/an" Vector__XXX
- SG_ KFWAPumpeEin : 4|1@1+ (1,0) [0|1] "aus/an" Vector__XXX
- SG_ TankalarmeAktiv : 5|1@1+ (1,0) [0|1] "aus/an" Vector__XXX
+ SG_ Wastewater25Percent : 0|1@1+ (1,0) [0|1] "aus/an" Vector__XXX
+ SG_ Wastewater50Percent : 1|1@1+ (1,0) [0|1] "aus/an" Vector__XXX
+ SG_ Wastewater75Percent : 2|1@1+ (1,0) [0|1] "aus/an" Vector__XXX
+ SG_ Wastewater90Percent : 3|1@1+ (1,0) [0|1] "aus/an" Vector__XXX
+ SG_ KFWAPumpPowerIndicator : 4|1@1+ (1,0) [0|1] "aus/an" Vector__XXX
+ SG_ TankAlarmActive : 5|1@1+ (1,0) [0|1] "aus/an" Vector__XXX
 
 BO_ 2566852097 BoeningXV: 8 Vector__XXX
- SG_ HydraulikHDGrossAktiv : 0|1@1+ (1,0) [0|1] "aus/an" Vector__XXX
- SG_ Landanschluss : 1|1@1+ (1,0) [0|1] "aus/an" Vector__XXX
- SG_ GLSHDGross : 2|1@1+ (1,0) [0|1] "aus/an" Vector__XXX
- SG_ GLSHDKlein : 3|1@1+ (1,0) [0|1] "aus/an" Vector__XXX
- SG_ AutomatikModeHDGross : 4|1@1+ (1,0) [0|1] "aus/an" Vector__XXX
- SG_ AutomatikModeHDKlein : 5|1@1+ (1,0) [0|1] "aus/an" Vector__XXX
+ SG_ LargeAuxDieselEngineHydraulicActive : 0|1@1+ (1,0) [0|1] "aus/an" Vector__XXX
+ SG_ ShoreConnectionOn : 1|1@1+ (1,0) [0|1] "aus/an" Vector__XXX
+ SG_ LargeAuxDieselEngineGSL : 2|1@1+ (1,0) [0|1] "aus/an" Vector__XXX
+ SG_ SmallAuxDieselEngineGSL : 3|1@1+ (1,0) [0|1] "aus/an" Vector__XXX
+ SG_ LargeAuxDieselEngineAutomaticMode : 4|1@1+ (1,0) [0|1] "aus/an" Vector__XXX
+ SG_ SmallAuxDieselEngineAutomaticMode : 5|1@1+ (1,0) [0|1] "aus/an" Vector__XXX
 
 
 
-CM_ SG_ 2566848513 Kraftstofftank01 "Kraftstofftank 01 (Bunkertank) Bb.";
-CM_ SG_ 2566848513 Kraftstofftank02 "Kraftstofftank 02 (Bunkertank) Stb.";
-CM_ SG_ 2566848513 Kraftstofftank05 "Kraftstofftank 05 (Tagestank)  Bb.";
-CM_ SG_ 2566848513 Kraftstofftank06 "Kraftstofftank 06 (Tagestank)  Stb.";
-CM_ SG_ 2566848769 Kraftstofftank07 "Kraftstofftank 07 (Vorratstank)  Bb.";
-CM_ SG_ 2566848769 Kraftstofftank08 "Kraftstofftank 08 (Vorratstank)  Stb.";
-CM_ SG_ 2566848769 Kraftstofftank15 "Kraftstofftank 15 (Bunkertank) Mitte";
-CM_ SG_ 2566848769 Bilgenwassertank12 "Bilgenwassertank 12";
-CM_ SG_ 2566849025 Frischwassertank14 "Frischwassertank 14";
-CM_ SG_ 2566849025 Schraeglagesensor "Schräglagesensor / Krängung";
-CM_ SG_ 2566849025 MaschinenraumTemperatur "Maschinenraumtemperatur";
-CM_ SG_ 2566849025 DruckFeuerloeschpumpe "Druck Feuerlöschpumpe";
-CM_ SG_ 2566849281 StromLichtmaschineHauptmotorBb "Strom Lichtmaschine Hauptmotor Bb.";
-CM_ SG_ 2566849281 GetriebeBbSchmieroelTemperatur "Getriebe Bb. Schmieröl Temperatur";
-CM_ SG_ 2566849281 StromLichtmaschineHauptmotorStb "Strom Lichtmaschine Hauptmotor Stb.";
-CM_ SG_ 2566849281 GetriebeStbSchmieroelTemperatur "Getriebe Stb. Schmieröl Temperatur";
-CM_ SG_ 2566849537 SpannungAutomationsbatterie "Spannung / Automationsbatterie";
-CM_ SG_ 2566849537 StromAutomationsbatterie "Strom / Automationsbatterie";
-CM_ SG_ 2566849537 SpannungBrueckenbatterie "Spannung / Brückenbatterie";
-CM_ SG_ 2566849537 StromBrueckenbatterie "Strom / Brückenbatterie";
-CM_ SG_ 2566849793 KraftstoffGesamt "Kraftstoff Gesamt";
-CM_ SG_ 2566849793 DrehzahlLuefterStb "Drehzahl Lüfter Stb.";
-CM_ SG_ 2566849793 DrehzahlLuefterBb "Drehzahl Lüfter Bb.";
-CM_ SG_ 2566850049 StromL1Landanschluss "Strom L1 / Landanschluss";
-CM_ SG_ 2566850049 StromL2Landanschluss "Strom L2 / Landanschluss";
-CM_ SG_ 2566850049 StromL3Landanschluss "Strom L3 / Landanschluss";
-CM_ SG_ 2566850049 WirkleistungLandanschluss "Wirkleistung / Landanschluss";
-CM_ SG_ 2566850305 VerbrauchLandanschluss "Verbrauch / Landanschluss";
-CM_ SG_ 2566850305 SpannungLandanschluss "Spannung / Landanschluss";
-CM_ SG_ 2566850305 FrequenzLandanschluss "Frequenz / Landanschluss";
-CM_ SG_ 2566850561 LeistungHDGross "Leistung / HD groß";
-CM_ SG_ 2566850561 BelastungHDGross "Belastung / HD groß";
-CM_ SG_ 2566850561 StromL1HDGross "Strom L1 / HD groß";
-CM_ SG_ 2566850561 StromL2HDGross "Strom L2 / HD groß";
-CM_ SG_ 2566850817 StromL3HDGross "Strom L3 / HD groß";
-CM_ SG_ 2566850817 SpannungHDGross "Spannung / HD groß";
-CM_ SG_ 2566850817 FrequenzHDGross "Frequenz / HD groß";
-CM_ SG_ 2566851073 LeistungHDKlein "Leistung / HD klein";
-CM_ SG_ 2566851073 BelastungHDKlein "Belastung / HD klein";
-CM_ SG_ 2566851073 StromL1HDKlein "Strom L1 / HD klein";
-CM_ SG_ 2566851073 StromL2HDKlein "Strom L2 / HD klein";
-CM_ SG_ 2566851329 StromL3HDKlein "Strom L3 / HD klein";
-CM_ SG_ 2566851329 SpannungHDKlein "Spannung / HD klein";
-CM_ SG_ 2566851329 FrequenzHDKlein "Frequenz / HD klein";
-CM_ SG_ 2566851585 SchmieroeldruckHDKlein "Schmieröldruck / HD klein";
-CM_ SG_ 2566851585 KuehlwassertemperaturHDKlein "Kühlwassertemperatur / HD klein";
-CM_ SG_ 2566851841 Abwassertank25Prozent "Abwassertank 25%";
-CM_ SG_ 2566851841 Abwassertank50Prozent "Abwassertank 50%";
-CM_ SG_ 2566851841 Abwassertank75Prozent "Abwassertank 75%";
-CM_ SG_ 2566851841 Abwassertank90Prozent "Abwassertank 90%";
-CM_ SG_ 2566851841 KFWAPumpeEin "KFWA Pumpe Ein";
-CM_ SG_ 2566851841 TankalarmeAktiv "Tankalarme aktiv";
-CM_ SG_ 2566852097 HydraulikHDGrossAktiv "Hydraulik HD groß aktiv";
-CM_ SG_ 2566852097 Landanschluss "Landanschluss";
-CM_ SG_ 2566852097 GLSHDGross "GLS / HD groß";
-CM_ SG_ 2566852097 GLSHDKlein "GLS / HD klein";
-CM_ SG_ 2566852097 AutomatikModeHDGross "Automatik mode / HD groß";
-CM_ SG_ 2566852097 AutomatikModeHDKlein "Automatik mode / HD klein";
+CM_ SG_ 2566848513 FuelTank01 "Fuel Tank 01 - Port";
+CM_ SG_ 2566848513 FuelTank02 "Fuel Tank 02 - Starboard";
+CM_ SG_ 2566848513 FuelTank05 "Fuel Tank 05 - Port";
+CM_ SG_ 2566848513 FuelTank06 "Fuel Tank 06 - Starboard";
+CM_ SG_ 2566848769 FuelTank07 "Fuel Tank 07 - Port";
+CM_ SG_ 2566848769 FuelTank08 "Fuel Tank 08 - Starboard";
+CM_ SG_ 2566848769 FuelTank15 "Fuel Tank 15 - Middle";
+CM_ SG_ 2566848769 BilgeWaterTank12 "Bilge Water Tank 12";
+CM_ SG_ 2566849025 FreshwaterTank14 "Freshwater Tank 14";
+CM_ SG_ 2566849025 Inclination "Inclination";
+CM_ SG_ 2566849025 EngineRoomTemperature "Engine Room Temperature";
+CM_ SG_ 2566849025 FirePumpPressure "Fire Pump Pressure";
+CM_ SG_ 2566849281 PortEngineAlternatorCurrent "Port Engine Alternator Current";
+CM_ SG_ 2566849281 PortGearboxLubOilTemperature "Port Gearbox Lubrication Oil Temperature";
+CM_ SG_ 2566849281 StarboardEngineAlternatorCurrent "Starboard Engine Alternator Current";
+CM_ SG_ 2566849281 StarboardGearboxLubOilTemperature "Starboard Gearbox Lubrication Oil Temperature";
+CM_ SG_ 2566849537 AutomationBatteryVoltage "Automation Battery Voltage";
+CM_ SG_ 2566849537 AutomationBatteryCurrent "Automation Battery Current";
+CM_ SG_ 2566849537 BridgeBatteryVoltage "Bridge Battery Voltage";
+CM_ SG_ 2566849537 BridgeBatteryCurrent "Bridge Battery Current";
+CM_ SG_ 2566849793 FuelTotal "Fuel Total";
+CM_ SG_ 2566849793 StarboardFanRotationSpeed "Starboard Fan Rotation Speed";
+CM_ SG_ 2566849793 PortFanRotationSpeed "Port Fan Rotation Speed";
+CM_ SG_ 2566850049 ShoreConnectionCurrentL1 "Shore Connection Current L1";
+CM_ SG_ 2566850049 ShoreConnectionCurrentL2 "Shore Connection Current L2";
+CM_ SG_ 2566850049 ShoreConnectionCurrentL3 "Shore Connection Current L3";
+CM_ SG_ 2566850049 ShoreConnectionActivePower "Shore Connection Active Power";
+CM_ SG_ 2566850305 ShoreConnectionConsumption "Shore Connection Consumption";
+CM_ SG_ 2566850305 ShoreConnectionVoltage "Shore Connection Voltage";
+CM_ SG_ 2566850305 ShoreConnectionFrequency "Shore Connection Frequency";
+CM_ SG_ 2566850561 LargeAuxDieselEnginePower "Large Auxiliary Diesel Engine Power";
+CM_ SG_ 2566850561 LargeAuxDieselEngineLoad "Large Auxiliary Diesel Engine Load";
+CM_ SG_ 2566850561 LargeAuxDieselEngineCurrentL1 "Large Auxiliary Diesel Engine Current L1";
+CM_ SG_ 2566850561 LargeAuxDieselEngineCurrentL2 "Large Auxiliary Diesel Engine Current L2";
+CM_ SG_ 2566850817 LargeAuxDieselEngineCurrentL3 "Large Auxiliary Diesel Engine Current L3";
+CM_ SG_ 2566850817 LargeAuxDieselEngineVoltage "Large Auxiliary Diesel Engine Voltage";
+CM_ SG_ 2566850817 LargeAuxDieselEngineFrequency "Large Auxiliary Diesel Engine Frequency";
+CM_ SG_ 2566851073 SmallAuxDieselEnginePower "Small Auxiliary Diesel Engine Power";
+CM_ SG_ 2566851073 SmallAuxDieselEngineLoad "Small Auxiliary Diesel Engine Load";
+CM_ SG_ 2566851073 SmallAuxDieselEngineCurrentL1 "Small Auxiliary Diesel Engine Current L1";
+CM_ SG_ 2566851073 SmallAuxDieselEngineCurrentL2 "Small Auxiliary Diesel Engine Current L2";
+CM_ SG_ 2566851329 SmallAuxDieselEngineCurrentL3 "Small Auxiliary Diesel Engine Current L3";
+CM_ SG_ 2566851329 SmallAuxDieselEngineVoltage "Small Auxiliary Diesel Engine Voltage";
+CM_ SG_ 2566851329 SmallAuxDieselEngineFrequency "Small Auxiliary Diesel Engine Frequency";
+CM_ SG_ 2566851585 SmallAuxDieselEngineLubOilPressure "Small Auxiliary Diesel Engine Lubrication Oil Pressure";
+CM_ SG_ 2566851585 SmallAuxDieselEngineCoolWaterTemperature "Small Auxiliary Diesel Engine Cool Water Temperature";
+CM_ SG_ 2566851841 Wastewater25Percent "Wastewater 25%";
+CM_ SG_ 2566851841 Wastewater50Percent "Wastewater 50%";
+CM_ SG_ 2566851841 Wastewater75Percent "Wastewater 75%";
+CM_ SG_ 2566851841 Wastewater90Percent "Wastewater 90%";
+CM_ SG_ 2566851841 KFWAPumpPowerIndicator "KFWA Pump Power Indicator";
+CM_ SG_ 2566851841 TankAlarmActive "Tank Alarm Active";
+CM_ SG_ 2566852097 LargeAuxDieselEngineHydraulicActive "Large Auxiliary Diesel Engine Hydraulic Active";
+CM_ SG_ 2566852097 ShoreConnectionOn "Shore Connection On";
+CM_ SG_ 2566852097 LargeAuxDieselEngineGSL "Large Auxiliary Diesel Engine GSL";
+CM_ SG_ 2566852097 SmallAuxDieselEngineGSL "Small Auxiliary Diesel Engine GSL";
+CM_ SG_ 2566852097 LargeAuxDieselEngineAutomaticMode "Large Auxiliary Diesel Engine Automatic Mode";
+CM_ SG_ 2566852097 SmallAuxDieselEngineAutomaticMode "Small Auxiliary Diesel Engine Automatic Mode";
 
 
 BA_DEF_ BO_ "GenMsgCycleTime" INT 0 65535;
