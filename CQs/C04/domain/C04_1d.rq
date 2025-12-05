@@ -1,4 +1,4 @@
-# What were the port fan speed values on 01.03.2021 when the engine room temperature exceeded 24°C?
+# What were the starboard fan speed values on 01.03.2025 when the engine room temperature exceeded 24°C?
 
 PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
 PREFIX sosa: <http://www.w3.org/ns/sosa/>
@@ -8,15 +8,15 @@ PREFIX dbc:  <http://example.org/dbc#>
 SELECT ?templog ?tempvalue ?timestamp ?rpmlog ?rpmvalue
 WHERE {
   ?templog a dbc:SignalLog ;
-           sosa:observedProperty ex:MaschinenraumTemperatur ;
+           sosa:observedProperty ex:EngineRoomTemperature ;
            sosa:hasSimpleResult ?tempvalue ;
            sosa:resultTime ?timestamp .
   FILTER(?tempvalue > 24.0)
-  FILTER(STRSTARTS(STR(?timestamp), "2021-03-01"))
+  FILTER(STRSTARTS(STR(?timestamp), "2025-03-01"))
 
   OPTIONAL {
     ?rpmlog a dbc:SignalLog ;
-            sosa:observedProperty ex:DrehzahlLuefterStb ;
+            sosa:observedProperty ex:StarboardFanRotationSpeed ;
             sosa:hasSimpleResult ?rpmvalue ;
             sosa:resultTime ?rpmtimestamp .
 	#Joining on timestamps with cut-off microseconds 
@@ -24,6 +24,7 @@ WHERE {
   }
 }
 ORDER BY ?timestamp
+
 
 
 
