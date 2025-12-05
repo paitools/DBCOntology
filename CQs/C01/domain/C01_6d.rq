@@ -7,7 +7,8 @@ PREFIX sosa: <http://www.w3.org/ns/sosa/>
 
 SELECT DISTINCT ?decID 
 WHERE {
-	ex:SpannungBrueckenbatterie dbc:isPartOf ?message .
+	ex:BridgeBatteryVoltage dbc:isPartOf ?message .
 	?message dbc:hasDecID ?decID .  
 }
+
 
