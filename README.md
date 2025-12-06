@@ -16,6 +16,9 @@ An automatically generated Ontology Specification Draft.
 ![Contributions](https://img.shields.io/badge/Documentation-Ontology_Specification_Draft-blue)
 
 
+[![Documentation](https://img.shields.io/badge/Documentation-Ontology_Specification_Draft-blue)](https://paitools.github.io/DBCOntology/documentation/index-en.html)
+
+
 ## CANDI User Guide
 
 ## License
