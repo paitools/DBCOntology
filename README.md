@@ -38,7 +38,7 @@ Running **CANDI** on user hardware involves two automated steps:
 
 ### 2. CANDI Deployment
 
-- After verifying the KGM, set the path to your CAN bus logs (raw messages).
+- After verifying the KGM, set the `raw_data_path` to your CAN bus logs (raw messages).
   
 - Deploy the framework:
   ```bash
