@@ -27,7 +27,8 @@ Running **CANDI** on user hardware involves two automated steps:
 
 1. Set the `DBC_FILE` path in the `load_dbc.py` configuration (e.g., `DBC/boening.dbc`).
 2. Run the script:
-   ```bash python3 load_dbc.py
+   ```bash
+   python3 load_dbc.py
    
 - The script will also load unit_mapping.json to convert user-defined DBC units into QUDT standard units (e.g., "kW" → "KiloW").
   * If a unit is not found in the mapping file, the original value is preserved and a warning is issued.
@@ -38,12 +39,14 @@ Running **CANDI** on user hardware involves two automated steps:
 
 - After verifying the KGM, set the path to your CAN bus logs (raw messages).
 - Deploy the framework:
-  ```bash python3 CANDI.py
+  ```bash
+  python3 CANDI.py
 
 - To run SPARQL queries (e.g., `user_query.rq`) on real-time data:
-   ```bash ontop.bat query -p ontop.properties -m mapping.ttl -q user_query.rq
+   ```bash
+   ontop.bat query -p ontop.properties -m mapping.ttl -q user_query.rq
 
-------------------------------------------------------------
+
 Requirements
 
 - DuckDB ≥ `1.0.0`
