@@ -31,7 +31,7 @@ Running **CANDI** on user hardware involves two automated steps:
    ```bash
    python3 load_dbc.py
    
-- The script will also load unit_mapping.json to convert user-defined DBC units into QUDT standard units (e.g., "kW" → "KiloW").
+- The script will also load unit_mapping.json to convert user-defined DBC units into QUDT standard units (e.g., `"kW"` → `"KiloW"`).
   * If a unit is not found in the mapping file, the original value is preserved and a warning is issued.
 
 - **Output:** a file named  `KGM.xlsx` will be generated in the project’s root directory.
