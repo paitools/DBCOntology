@@ -12,6 +12,7 @@ from collections import defaultdict
 KG_Matrix = "KGM.xlsx"
 DuckDB = "ontop.duckdb"
 output_dir = "owl"
+raw_data_path ="raw/*/*/*/*.csv"
 
 
 # ---------------------------------------------------
@@ -103,7 +104,7 @@ FROM read_csv_auto(
 """)
 
 # messagelog
-create_view(con, "messagelog", """
+create_view(con, "messagelog", f"""
 CREATE OR REPLACE VIEW messagelog AS
 SELECT
     REPLACE(
@@ -115,7 +116,7 @@ SELECT
     ide,
     data
 FROM read_csv_auto(
-    'raw/*/*/*/*.csv',
+    '{raw_data_path}',
     AUTO_DETECT=TRUE,
     FILENAME=TRUE
 )
@@ -297,3 +298,4 @@ SELECT
 
 FROM decoded;
 """)
+
