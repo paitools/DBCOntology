@@ -50,13 +50,13 @@ Running **CANDI** on user hardware involves two automated steps:
    ```bash
    ontop.bat query -p ontop.properties -m mapping.ttl -q user_query.rq
 
-
 Requirements
 
 - DuckDB ≥ `1.0.0`
 - Ontop client ≥ `5.3.0`
 
-Ensure both are installed before running the framework. In case of compatibility issues, use the exact versions as stated above. 
+Ensure both are installed before running the framework. 
+If compatibility issues occur, use the exact versions listed above.
 
 
 ## License
