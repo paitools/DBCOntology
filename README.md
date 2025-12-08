@@ -47,6 +47,7 @@ Running **CANDI** on user hardware involves two automated steps:
 ### Running SPARQL
 
 - To run SPARQL queries (e.g., `user_query.rq`) on real-time data:
+
    ```bash
    ontop.bat query -p ontop.properties -m mapping.ttl -q user_query.rq
 
