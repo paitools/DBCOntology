@@ -17,6 +17,20 @@ Automatically generated Ontology Specification.
 
 ## CANDI User Guide
 
+Running **CANDI** on user hardware involves two automated steps:
+
+1. **Create the Knowledge Graph Matrix (KGM)**
+2. **Deploy the Framework**
+
+
+### 1. KGM Creation
+
+1. Set the DBC file path in the `load_dbc.py` configuration (e.g., `DBC/boening.dbc`).
+2. Run the script:
+   ```bash
+   python3 load_dbc.py
+
+
 ## License
 
 All resources are licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-nc-sa/4.0/) license.
