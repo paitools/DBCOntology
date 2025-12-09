@@ -48,7 +48,7 @@ Domain specific
 2. Which unit is associated to the signal log of the fresh water tank?
 3. Which message logs were most recently recorded on can2 bus?
 4. What was the average value of the fuel tank 1 signal in the last three days?
-5. What is the maximum port fan RPM observed on 01.01.2021 after 2 pm?
+5. What is the maximum port fan RPM observed on 01.01.2025 after 2 pm?
 
 
 ###############################
@@ -56,6 +56,7 @@ Domain specific
 ###############################
 
 Domain specific
-1. What were the port fan speed values on 01.03.2021 when the engine room temperature exceeded 24°C?
+1. What were the port fan speed values on 01.03.2025 when the engine room temperature exceeded 24Â°C?
 2. What are encoding schemas of CAN message that observes the highest number of signals?
 3. Which signals have measured values at least 20?percent higher than the average in the last 10 minutes?
+
