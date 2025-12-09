@@ -13,20 +13,21 @@ WHERE {
       ?log sosa:observedProperty ?signal ;
            sosa:hasSimpleResult ?val ;
            sosa:resultTime ?time .
-      FILTER(?time >= "2025-03-01T13:49:00"^^xsd:dateTime &&
-             ?time <= "2025-03-01T13:59:00"^^xsd:dateTime)
+      FILTER(?time >= "2025-03-01T19:49:00"^^xsd:dateTime &&
+             ?time <= "2025-03-01T19:59:00"^^xsd:dateTime)
     }
     GROUP BY ?signal
   }
   ?signallog sosa:observedProperty ?signal ;
              sosa:hasSimpleResult ?signalvalue ;
              sosa:resultTime ?timestamp .
-  FILTER(?timestamp >= "2025-03-01T13:49:00"^^xsd:dateTime &&
-         ?timestamp <= "2025-03-01T13:59:00"^^xsd:dateTime)
+  FILTER(?timestamp >= "2025-03-01T19:49:00"^^xsd:dateTime &&
+         ?timestamp <= "2025-03-01T19:59:00"^^xsd:dateTime)
 
   FILTER(?signalvalue > 1.2 * ?meanvalue)
 }
 ORDER BY ?timestamp
+
 
 
 
