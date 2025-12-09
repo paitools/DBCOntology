@@ -1,4 +1,4 @@
-# What is the maximum starboard fan RPM observed on 01.01.2021 after 2pm?
+# What is the maximum starboard fan RPM observed on 01.01.2025 after 2pm?
 
 PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
 PREFIX dbc:  <http://example.org/dbc#>
@@ -14,4 +14,5 @@ WHERE {
 
   FILTER(?timestamp > "2025-01-01T14:00:00"^^xsd:dateTime)
 }
+
 
