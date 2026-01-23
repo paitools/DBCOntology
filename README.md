@@ -83,7 +83,7 @@ Let's say we want to change the logging path to a different structure or directo
 
 Like before, in the CANDI.py source code, set the `raw_data_path` to the new logging structure `/home/logs/*.json`
 
-However, this time, the file format is changed from `csv` to `json` and we need to change the message log reading function as well.
+However, this time, the file format is changed from `csv` to `json` and we need to change the message log reading function accordingly.
 
 Now, search for messagelog view and change the `read_csv_auto()` function to `read_json()`. Notice that `raw_data_path` will also receive the newly configured value.
 
