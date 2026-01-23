@@ -16,6 +16,7 @@ The DBC Ontology is a domain ontology for modeling Controller Area Network (CAN)
 The motivation for the DBC Ontology arises from the growing volume and importance of CAN bus data in transportation and cyber-physical systems, including automotive, maritime, railway, and aerospace domains. While CAN is widely adopted as a reliable communication protocol, its data is typically stored and exchanged in encoded, schema-dependent formats (e.g., DBC files) that lack explicit semantics and hinder cross-system integration, reuse, and advanced analytics. Existing semantic models often operate at higher abstraction levels or assume pre-decoded data, limiting their applicability to real-time, resource-constrained, or security-sensitive environments. Against this state of the art, the DBC Ontology aims to bridge the gap between raw CAN bus data and semantic data integration frameworks. 
 
 Its goals are to 
+
 (i) provide a standardized semantic representation of CAN communication grounded in established W3C ontologies, 
 (ii) support dynamic decoding and ontology-based access to encoded data streams, 
 (iii) enable scalable, secure, and reusable analytics across domains. 
