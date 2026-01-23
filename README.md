@@ -87,6 +87,8 @@ Save the changes and redeploy the framework:
   ```bash
   python3 CANDI.py
 
+Result: CANDI now operates with the new logging structure and file format
+
 
 ## License
 
