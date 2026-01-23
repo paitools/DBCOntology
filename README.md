@@ -26,7 +26,7 @@ By serving as the semantic core of the CANDI framework (see here: https://github
 
 Automatically generated Ontology Specification Draft.
 
-[![Documentation](https://img.shields.io/badge/Documentation-Ontology_Specification-blue)](https://paitools.github.io/DBCOntology/documentation/index-en.html)
+[![Documentation](https://img.shields.io/badge/Documentation-DBC_Ontology-blue)](https://paitools.github.io/DBCOntology/documentation/index-en.html)
 
 ## CANDI User Guide
 
