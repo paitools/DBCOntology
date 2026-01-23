@@ -17,9 +17,9 @@ The motivation for the DBC Ontology arises from the growing volume and importanc
 
 Its goals are to:
 
-(i) provide a standardized semantic representation of CAN communication grounded in established W3C ontologies, 
-(ii) support dynamic decoding and ontology-based access to encoded data streams, 
-(iii) enable scalable, secure, and reusable analytics across domains. 
+- (i) provide a standardized semantic representation of CAN communication grounded in established W3C ontologies, 
+- (ii) support dynamic decoding and ontology-based access to encoded data streams, 
+- (iii) enable scalable, secure, and reusable analytics across domains. 
 
 By serving as the semantic core of the CANDI framework (see here: https://github.com/paitools/DBCOntology and https://zenodo.org/records/17671851), the DBC Ontology facilitates automated deployment, real-time diagnostics, and long-term analysis of CAN-based telemetry, while remaining open, extensible, and reusable for the broader community.
 
