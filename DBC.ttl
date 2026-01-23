@@ -182,12 +182,11 @@ sosa:madeObservation a owl:ObjectProperty ;
     rdfs:label "made observation" .
 
 qudt:byteOrder a owl:ObjectProperty ;
-    rdfs:domain dbc:SignalEncoding ;
     rdfs:range qudt:EndianType ;
     rdfs:label "byte order" .
 
 qudt:hasUnit a owl:ObjectProperty ;
-    rdfs:domain dbc:Signal ;
+    rdfs:range qudt:Unit ;
     rdfs:label "has unit" .
 
 #################################################################
@@ -232,9 +231,6 @@ dbc:hasHexID a owl:DatatypeProperty ;
     rdfs:label "hexadecimal ID" ;
     rdfs:comment "Stores the CAN identifier of a logged message in hexadecimal notation, as extracted from the CAN frame." .
 
-qudt:byteOrder a owl:DatatypeProperty ;
-    rdfs:label "byte order" .
-
 qudt:conversionMultiplier a owl:DatatypeProperty ;
     rdfs:label "conversion multiplier" .
 
@@ -254,7 +250,7 @@ sosa:hasSimpleResult a owl:DatatypeProperty ;
 sosa:resultTime a owl:DatatypeProperty ;
     rdfs:domain sosa:Observation ;
     rdfs:range xsd:dateTime ;
-
     rdfs:label "result time" .
+
 
 
