@@ -24,7 +24,7 @@ By serving as the semantic core of the CANDI framework (see here: https://github
 
 ## Ontology Documentation:
 
-Automatically generated Ontology Specification Draft.
+Ontology Specification with permanent (https://w3id.org/dbc-ontology/) identifier:
 
 [![Documentation](https://img.shields.io/badge/Documentation-DBC_Ontology-blue)](https://paitools.github.io/DBCOntology/documentation/index-en.html)
 
