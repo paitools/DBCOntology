@@ -85,7 +85,7 @@ Like before, in the CANDI.py source code, set the `raw_data_path` to the new log
 
 However, this time, the file format is changed from `csv` to `json` and we need to change the message log reading function as well.
 
-Now, search for messagelog view and change the `read_csv_auto()` function to `read_json_auto()`. Notice that `raw_data_path` will also receive the newly configured value.
+Now, search for messagelog view and change the `read_csv_auto()` function to `read_json()`. Notice that `raw_data_path` will also receive the newly configured value.
 
 Save the changes and redeploy the framework:
 
