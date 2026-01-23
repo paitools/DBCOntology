@@ -96,6 +96,13 @@ python3 CANDI.py
 Result: CANDI now operates with the new logging structure and `json` file format.
 
 
+### Supported Formats
+
+Format: `csv`  Function: `read_csv_auto()`
+Format: `json`  Function: `read_json()`
+Format: `tsv`  Function: `read_csv_auto()`
+Format: `parquet`  Function: `read_parquet()`
+Format: `jsonl`  Function: `read_ndjson()`
 
 ## License
 
