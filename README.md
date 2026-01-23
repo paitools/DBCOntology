@@ -76,6 +76,7 @@ If compatibility issues occur, use the exact versions listed above.
 
 ## Code Modification
 
+
 ### Changing Logging Structure and File Format
 
 Let's say we want to change the logging path to a different structure or directory (e.g., `/home/logs/*.json`).
@@ -84,10 +85,12 @@ However, this time, the file format is changed from `csv` to `json` and we need 
 Now, search for messagelog view and change the `read_csv_auto()` function to `read_json_auto()`. Notice that `raw_data_path` will also receive the newly configured value.
 Save the changes and redeploy the framework:
 
-   ```bash
+   ``bash
    python3 CANDI.py
 
-Result: CANDI now operates with the new logging structure and `json` file format
+Result: CANDI now operates with the new logging structure and `json` file format.
+
+
 
 
 ## License
